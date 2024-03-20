@@ -1,48 +1,82 @@
 
 
-.benefit-div{
-    padding: 1rem;
-    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-}
 
-.benefit-div p{
-    font-size: 1.5rem;
-    font-weight: 600;
+
+.benefit-container {
+    padding: 20px;
+    
+  }
+  
+  .benefit-heading {
+    font-size: 30px;
+     color: black;
+     text-align: center;
+     font-weight: 400;
+     margin-top: 20px;
+     margin-bottom: 20px;
+    /* font-size: 24px;
+    font-weight: bold;
     text-align: center;
-    margin-top: 2.5rem; 
-}
-
-.benefit-div-1{
+    margin-top: 20px;
+    color: #374151; */
+  }
+  
+  .benefit-items {
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
-    margin-top: 2.5rem;
-    height: 400px;
-    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-}
+    margin-top: 20px;
+  }
+  
+  .benefit-item {
+    flex: 1; 
+    margin: 30px;
+    padding: 20px;
+    height: 350px;
+    width: 100px !important;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    /* border-bottom: 4px solid red; */
+    border: 1px solid red;
+    border-radius: 20px;
+    background-color: #F3F4F6;
+  }
+  
+  .icon-wrapper {
+    display: flex;
+    justify-content: left;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  
+  .icon {
+    /* background-color: red; */
+    color: red;
+    padding: 12px;
+    border-radius: 50%;
+    border: 1px solid red;
+  }
+  
+  .benefit-title {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    color: #374151;
+  }
 
-.benefit-div-1 div{
-    /* box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); */
-    border-bottom: 4rem;
-    border-radius: 100%;
-    /* border: 2px solid red; */
-    padding: 1rem;
-    margin: 1rem;
-}
-
-
-.benefit-div-2{
-    /* border: 2px solid pink;
-    */
-    /* padding: 1rem; */
-    text-align: center;
-}
-
-.benefit-div-1 p{
-    font-size: 1rem;
-    font-weight: 400;
-    text-align: center;
-    margin-top: 2.5rem; 
-}
-
+  
+  
+  .benefit-description {
+    font-size: 14px;
+    text-align: left;
+    color: #6B7280;
+    
+  }
+  
+  @media screen and (max-width: 768px) {
+    .benefit-item {
+      width: 45%; /* Adjust width for smaller screens if needed */
+    }
+  }
+  

@@ -40,7 +40,7 @@
   
   .banner-text p {
     font-size: 1.7rem;
-    color: rgb(151, 107, 10);
+    color: #D0A144;
   }
 
 
@@ -89,12 +89,13 @@ input:focus {
   width: 120px;
   padding: 1rem;
   border: none;
-  border-radius: 45px !important;
+  border-radius: 20px !important;
   /* margin-left: 1rem; */
   margin-right: 1rem;
   background-color: #02244a !important;
   color: white;
   margin-left: auto; 
+  margin-top: 5px;
 
 }
 
@@ -119,8 +120,9 @@ input:focus {
   background-color: transparent;
   height: 100px;
   width: 900px;
-  border: 1px solid white;
+  border: 1px solid #D0A144;
   border-radius: 20px;
+  background-color: #02244a;
   
 }
 

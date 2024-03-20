@@ -1,3 +1,5 @@
+
+
 import React from "react";
 import "./Banner.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -17,7 +19,7 @@ function Banner() {
       <div className="banner-image">
         {/* <div className="banner-overlay"></div> */}
         <div className="banner-text">
-          <h2>Empower your lgal journey with precision and efficiency</h2>
+          <h2>Empower your legal journey with precision and efficiency</h2>
           <p>welcome to your ultimate law toolkit</p>
         </div>
 
@@ -41,7 +43,7 @@ function Banner() {
             <FontAwesomeIcon
               icon={faUser}
               size="3x"
-             
+             style={{color:'#D0A144'}}
             />
             <div class="column">
               <h4>1M +</h4>
@@ -52,7 +54,7 @@ function Banner() {
             <FontAwesomeIcon
               icon={faDownload}
               size="3x"
-              
+              style={{color:'#D0A144'}}
             />
             <div class="column">
               <h4>12K</h4>
@@ -63,7 +65,7 @@ function Banner() {
             <FontAwesomeIcon
               icon={faShareAlt}
               size="3x"
-              
+              style={{color:'#D0A144'}}
             />
             <div class="column">
               <h4>10K+</h4>

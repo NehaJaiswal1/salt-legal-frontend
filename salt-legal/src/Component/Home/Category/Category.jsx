@@ -34,7 +34,7 @@ function Category() {
                   <FontAwesomeIcon
                     icon={item.img}
                     size="3x"
-                    style={{ color: "gray", textShadow: '0px 0px 1px red' }}
+                    style={{ color: "red", textShadow: '0px 0px 1px red' }}
                     />
                 </CardMedia>
                 <div className="card-style-1">

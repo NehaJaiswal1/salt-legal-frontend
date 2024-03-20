@@ -1,0 +1,115 @@
+
+
+
+/* FooterBanner.css */
+
+.footer-banner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-banner-1 {
+    width: 80%;
+    height: 150px;
+    border-radius: 20px;
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
+    background: #02244a;
+    display: flex;
+    margin: 0 auto;
+    /* border: 1px solid yellow; */
+
+  }
+  
+  .text {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    font-size: 30px;
+    /* font-weight: bold; */
+    color: white;
+    margin-left: 100px;
+
+
+    /* font-size: 30px;
+     color: black; */
+     /* text-align: center; */
+     font-weight: 400;
+  }
+
+  .text p{
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-align: center;
+    margin-left: 20px;
+    /* margin-top: 2.5rem; */
+  }
+  
+  .image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* margin-right: 50px; */
+  }
+  
+  .image img {
+    width: 150px;
+    height: 100px;
+    border-radius: 20px;
+    margin-right: 100px;
+  }
+  
+  .content-wrapper {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .content-left {
+    flex: 1;
+  }
+  
+  .content-right {
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  
+  .content-right iframe,
+  .content-right h2 {
+    margin-bottom: 20px;
+  }
+  
+
+  .footer-banner-2 h2{
+    text-align: center;
+    color: black;
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    /* font-weight: bold; */
+
+    /* font-size: 30px;
+     color: black;
+     text-align: center; */
+     font-weight: 400;
+  }
+
+  .footer-banner-2 p{
+    text-align: center;
+    color: black;
+    font-size: 15px;
+    font-weight:lighter;
+  }
+
+  span{
+    color: red;
+    font-weight: 300;
+    font-size: 45px;
+  }

@@ -1,2 +1,64 @@
 
 
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: center;
+    margin-top: 50px;
+  }
+
+  /* .card-container1{
+    background-color: #ededee;
+    border-top: 1px solid #02244a;
+    border-bottom: 1px solid #02244a;
+  }
+   */
+  .card {
+    width: 20%; /* To show 4 cards in a row */
+    height: 50px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #02244a;
+    display: flex;
+    flex-direction: row;
+    border-radius: 5px;
+    align-items: center;
+    background-color: white;
+
+  }
+  
+  .card-container h3{
+    font-size: 30px;
+    color: black;
+    text-align: center;
+    font-weight: 400;
+   
+   
+ }
+ .card-container p{
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    font-weight: 100;
+    margin-bottom: 50px;
+ }
+
+ .card h4{
+    color:#02244a;
+ }
+  .card h3 {
+    margin-top: 0;
+  }
+
+  .center-button {
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    cursor: pointer;
+    
+    margin-top: 20px; 
+    margin-bottom: 50px;
+  }
+
+  

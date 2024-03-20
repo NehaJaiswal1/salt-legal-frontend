@@ -5,97 +5,55 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faEnvelope, faStar, faChevronRight, faX } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faTwitter, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-
+import './Footer.css';
 
 
 const Footer = () => {
     return (
        
-            <div className=" ">
-               
-
-                <div className="flex flex-wrap justify-between p-8 " style={{backgroundColor:'#02244A'}}>
-                    <div className=" md:w-1/4 mb-8 ">
-                        <h3 className="text-xl font-bold text-white">THE SALT LEGAL</h3>
-                        <p className='text-white mt-2 text-sm mr-12'>
-                        We excels in employer-employee disputes, labor law, startup advisory, cyberthefts, contracts and intellectual property, providing tailored solutions with innovation and excellence....
-                        </p>
-                    </div>
-
-                    <div className="md:w-1/4 mb-8">
-                        <h2 className="text-xl font-bold text-white">USEFUL LINKS</h2>
-                        <ul>
-                            <li className='text-white   mt-2 text-sm'><FontAwesomeIcon icon={faChevronRight} className="mr-1" />
-                                <Link to="/">Home</Link></li>
-                            <li className='text-white mt-2 text-sm '><FontAwesomeIcon icon={faChevronRight} className="mr-1" />
-                                <Link to="/aboutus">About Us</Link></li>
-                            <li className='text-white mt-2 text-sm'><FontAwesomeIcon icon={faChevronRight} className="mr-1" />
-                                <Link to="/">Templates</Link></li>
-                            <li className='text-white mt-2 text-sm'><FontAwesomeIcon icon={faChevronRight} className="mr-1" />
-                                <Link to="/">Pricing</Link></li>
-                          
-                            <li className='text-white mt-2 text-sm'><FontAwesomeIcon icon={faChevronRight} className="mr-1" />
-                                <Link to="/contact">Contact Us</Link></li>
-                         
-                        </ul>
-                    </div>
-
-
-
-                    <div className=" md:w-1/4 mb-8">
-                        <h3 className="text-xl font-bold text-white">CONNECT WITH US</h3>
-                        <ul>
-                            <li className="text-white mt-2 text-sm">
-                                <FontAwesomeIcon icon={faChevronRight} className="mr-1" />
-                                <Link to="/">Home</Link>
-                            </li>
-                            <li className="text-white mt-2 text-sm">
-                                <FontAwesomeIcon icon={faChevronRight} className="mr-1" />
-                                <Link to="/">About Us</Link>
-                            </li>
-                            <li className="text-white mt-2 text-sm">
-                                <FontAwesomeIcon icon={faChevronRight} className="mr-1" />
-                                <Link to="/">Template</Link></li>
-                            <li className="text-white mt-2 text-sm"> <FontAwesomeIcon icon={faChevronRight} className="mr-1" />
-                                <Link to="/">Pricing</Link></li>
-                            <li className="text-white mt-2 text-sm"> <FontAwesomeIcon icon={faChevronRight} className="mr-1" />
-                                <Link to="/">Contact Us</Link></li>
-                            
-                        </ul>
-                    </div>
-
-                    <div className=" md:w-1/4 mb-8 text-white">
-                        <h3 className="text-xl font-bold text-white">Follow Us</h3>
-                        <p className='text-white mt-2 text-sm p-1'><FontAwesomeIcon icon={faPhone} size='lg' /> +1 (416) 871-5196</p>
-                        <p className='text-white mt-2 text-sm p-1'><FontAwesomeIcon icon={faEnvelope} size='lg' /> contact@gmail.com</p>
-
-                        <div className="flex items-center  mt-4">
-                            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="text-white mr-2 rounded-full">
-                                <FontAwesomeIcon icon={faFacebook} size="2x" />
-                            </a>
-                            <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" className="text-white ml-2 mr-2 rounded-full">
-                                <FontAwesomeIcon icon={faX} size="2x" />
-                            </a>
-                            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="text-white ml-2 mr-2 rounded-full">
-                                <FontAwesomeIcon icon={faInstagram} size="2x" />
-                            </a>
-                            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="text-white ml-2 rounded-full">
-                                <FontAwesomeIcon icon={faLinkedin} size="2x" />
-                            </a>
-                        </div>
-
-
-                    </div>
-                </div>
-
-
-               
-                <div className=" text-left mb-2 font-semibold p-2" style={{backgroundColor:'#02244a'}}>
-                    <p className='text-white text-xs' >COPYRIGHT © 2024 - THE SALT LEGAL - ALL RIGHTS RESERVED.</p>
-                </div>
-
+        <div class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 class="footer-heading">THE SALT LEGAL</h3>
+                <p class="footer-text">We excel in employer-employee disputes, labor law, startup advisory, cyberthefts, contracts and intellectual property, providing tailored solutions with innovation and excellence....</p>
             </div>
-      
+            <div class="footer-section">
+                <h2 class="footer-heading">USEFUL LINKS</h2>
+                <ul class="footer-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/aboutus">About Us</a></li>
+                    <li><a href="/">Templates</a></li>
+                    <li><a href="/">Pricing</a></li>
+                    <li><a href="/contact">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-heading">CONNECT WITH US</h3>
+                <ul class="footer-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">About Us</a></li>
+                    <li><a href="/">Templates</a></li>
+                    <li><a href="/">Pricing</a></li>
+                    <li><a href="/">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-heading">Follow Us</h3>
+                <p><FontAwesomeIcon icon={faPhone} size='lg' style={{color:'#D0A144', marginRight:'5px'}}/> +1 (416) 871-5196</p>
+                <p><FontAwesomeIcon icon={faEnvelope} size='lg' style={{color:'#D0A144', marginRight:'5px'}}/> contact@gmail.com</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faFacebook} size="2x" style={{color:'#D0A144', marginRight:'5px'}}/></a>
+                    <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faTwitter} size="2x" style={{color:'#D0A144', marginRight:'5px'}}/></a>
+                    <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faInstagram} size="2x" style={{color:'#D0A144', marginRight:'5px'}}/></a>
+                    <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedin} size="2x" style={{color:'#D0A144', marginRight:'5px'}}/></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="footer-text">COPYRIGHT © 2024 - THE SALT LEGAL - ALL RIGHTS RESERVED.</p>
+        </div>
+    </div>
+    
     );
 };
 

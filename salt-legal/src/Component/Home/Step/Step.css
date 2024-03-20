@@ -1,16 +1,20 @@
 
 .div-step{
-    background: rgba(73, 146, 211, 11%);
+    background: #ededee;
     height: 700px;
     width: 100%;
     margin-top: 100px;
+    border-top: 1px solid #02244a;
+    border-bottom: 1px solid #02244a;
 }
 
-.div-step div h3{
+.div-step div h2{
     font-size: 30px;
-    color: gray;
+    color: black;
     text-align: center;
     font-weight: 400;
+   margin-top: 50px;
+   margin-bottom: 50px;
 }
 
 .div-step2{
@@ -33,3 +37,41 @@
     justify-content: center;
     align-items: center;
 }
+
+
+  
+  .step-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .step-item {
+    flex: 1; 
+    margin: 30px;
+    padding: 20px;
+    height: 400px;
+    width: 100px !important;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    /* border-bottom: 4px solid red; */
+    
+    border-radius: 20px;
+    background-color: #F3F4F6;
+  }
+  
+ 
+  .step-item p{
+    font-size: 22px;
+    color: black;
+    text-align: center;
+    font-weight: 400;
+   margin-top: 50px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .step-item {
+      width: 45%; /* Adjust width for smaller screens if needed */
+    }
+  }
+  
