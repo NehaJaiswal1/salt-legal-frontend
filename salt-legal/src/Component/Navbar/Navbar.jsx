@@ -15,11 +15,12 @@ const Navbar = () => {
       <h2 className="navbar-left">THE SALT LEGAL</h2>
       <div className="navbar-div-a">
         <Link to="/">HOME</Link>
-        <Link to="/feature">FEATURE</Link>
-        <Link to="/package">PACKAGE</Link>
-        <Link to="/templates">TEMPLATE</Link>
+        <Link to="/feature">FEATURES</Link>
+        <Link to="/package">PACKAGES</Link>
+        <Link to="/templates">TEMPLATES</Link>
+        <Link to="/templates">NEWSLETTER</Link>
         <Link to="/about">ABOUT</Link>
-       
+        <Link to="/about">CONTACT US</Link>
         
       </div>
 

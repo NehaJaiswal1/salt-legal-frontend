@@ -31,21 +31,21 @@ function Category() {
                 }}
               >
                 <CardMedia>
-                  <FontAwesomeIcon
-                    icon={item.img}
-                    size="3x"
-                    style={{ color: "#d0a144", textShadow: "0px 0px 1px red" ,marginTop:'20px'}}
+                  <img
+                    src={item.img}
+                    
+                    style={{ width:'100px'}}
                   />
                 </CardMedia>
                
                 <div className="card-style-1">
-                <hr
+                {/* <hr
                   style={{
                    
                     backgroundColor: "gray",
                     height: '2px',width:'180px'
                   }}
-                />
+                /> */}
                   <Typography
                     variant="h6"
                     component="h2"
@@ -54,6 +54,13 @@ function Category() {
                   >
                     {item.name}
                   </Typography>
+                  <hr
+                  style={{
+                   
+                    backgroundColor: "gray",
+                    height: '2px',width:'180px'
+                  }}
+                />
                 </div>
               </div>
             </CardContent>

@@ -24,7 +24,7 @@
   
     margin-top: 20px;
     border: 1px solid gray;
-    background-color: #02244a !important;
+    /* background-color: #02244a !important; */
     border-radius: 20px !important;
   }
   .category-container div h2{
