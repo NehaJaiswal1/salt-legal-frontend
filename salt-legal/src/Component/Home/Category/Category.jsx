@@ -34,14 +34,24 @@ function Category() {
                   <FontAwesomeIcon
                     icon={item.img}
                     size="3x"
-                    style={{ color: "red", textShadow: '0px 0px 1px red' }}
-                    />
+                    style={{ color: "#d0a144", textShadow: "0px 0px 1px red" ,marginTop:'20px'}}
+                  />
                 </CardMedia>
+               
                 <div className="card-style-1">
+                <hr
+                  style={{
+                   
+                    backgroundColor: "gray",
+                    height: '2px',width:'180px'
+                  }}
+                />
                   <Typography
                     variant="h6"
                     component="h2"
-                    style={{ textAlign: "center"}}>
+                    className="card-style-2"
+                    style={{ textAlign: "center" }}
+                  >
                     {item.name}
                   </Typography>
                 </div>

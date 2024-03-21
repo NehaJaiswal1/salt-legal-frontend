@@ -1,7 +1,7 @@
 
 
 import React from 'react';
-import Navbar from './Navbar/Navbar1';
+import Navbar from '../Navbar/Navbar';
 import Category from '../Templates/Category/Category1';
 import TemplateSample from './TemplateSample/TemplateSample';
 

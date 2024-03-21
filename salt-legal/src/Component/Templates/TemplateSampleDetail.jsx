@@ -1,6 +1,7 @@
 
 
-import React from 'react'
+import React from 'react';
+import './TemplateSampleDetail';
 
 function TemplateSampleDetail() {
   return (
