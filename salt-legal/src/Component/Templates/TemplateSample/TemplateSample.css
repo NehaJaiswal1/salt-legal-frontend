@@ -1,0 +1,70 @@
+
+
+.template-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    padding: 80px;
+  }
+
+  .template-card-style-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 15%; 
+    height: 240px;
+    /* margin: 0 1%;  */
+    /* padding: 10px; */
+    margin-top: 20px;
+    border: 1px solid rgb(230, 229, 229);
+    /* background-color: #02244a !important; */
+    border-radius: 5px !important;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  
+  }
+
+  .template-container-h2{
+    font-size: 30px;
+     color: black;
+     text-align: center;
+     font-weight: 400;
+  }
+  
+  
+  
+  .template-container p{
+    text-align: center;
+    color:#d0a144;
+    font-size: 12px;
+    margin-top: 10px;
+    font-weight: 700;
+  }
+  
+
+  .template-card-style{
+    margin-top: 2px;
+  }
+
+.template-button-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+  .register-button{
+    background-color: #02244a!important;
+    color: white!important;
+    border: none!important;
+    padding: 10px 20px!important;
+    border-radius: 5px!important;
+    margin-top: 2px!important;
+    margin-bottom: 20px!important;
+    width: 180px !important;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.4), 0 8px 10px -6px rgb(0 0 0 / 0.6) !important;
+  }
+  
+  
+   

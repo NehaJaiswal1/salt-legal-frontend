@@ -9,6 +9,7 @@ import Templates from './Component/Templates/Templates';
 import About from './Component/About/About';
 import Package from './Component/Package/Package';
 import Features from './Component/Features/Features';
+import TemplateSampleDetail from './Component/Templates/TemplateSampleDetail';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
 
             <Route exact path="/package" element={<Package/>} />
             <Route exact path="/feature" element={<Features/>} />
+            <Route exact path="/templates/template-sample" element={<TemplateSampleDetail/>} />
           </Routes>
       </div>
       
