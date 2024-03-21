@@ -1,2 +1,130 @@
 
 
+.templateSampleContainer{
+    padding: 50px;
+    margin-top: 50px;
+    /* display: flex;
+    flex-direction: row; */
+}
+
+.templateSampleContainer-h2{
+    font-size: 30px;
+     color: black;
+     text-align: center;
+     font-weight: 400;
+     /* margin-bottom: 50px; */
+     /* margin-top: 100px; */
+}
+
+.templateSampleContainer-p{
+    color: gray;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+
+.template-sample-card{
+    /* background-color: #ededee; */
+    /* border-top: 1px solid #02244a; */
+    /* border-bottom: 1px solid #02244a; */
+    width: 600px;
+    height: 700px;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.5), 0 8px 10px -6px rgb(0 0 0 / 0.5) !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* margin-top: 100px !important; */
+    /* align-self: flex-start; */
+    
+}
+
+.template-sample-subcard-1{
+    margin-top: 50px;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.2), 0 8px 10px -6px rgb(0 0 0 / 0.2)!important;
+    border-left: 2px solid gray;
+    /* border-right: 2px solid #d0a144; */
+    background-image: url('../../assets/template//cardbg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* border-top: 2px solid #d0a144; */
+    /* justify-content: space-between; */
+}
+
+.template-sample-subcard{
+    width: 350px;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    background: rgb(255,255,255);
+background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(208,161,68,0.6110819327731092) 100%);
+    /* justify-content: space-between; */
+    /* box-shadow: none; */
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.2), 0 8px 10px -6px rgb(0 0 0 / 0.2) !important;
+    /* position: relative; */
+   
+   
+   
+}
+
+.template-sample-sub-subcard p{
+    font-size: 15px;
+    color: black;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.template-sample-sub-subcard-p{
+    font-size: 15px;
+    color: gray !important;
+    font-weight: 500 !important;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+
+.template-sample-sub-subcard{
+    /* padding: 20px; */
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-left: 20px;
+    
+}
+.template-sample-subcard button{
+    width: 280px;
+    height: 60px;
+    border: none;
+    border-radius: 10px;
+    background-color: #02244a;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+   
+    
+}
+
+.template-sample-subcard-div{
+   
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px solid rgb(141, 139, 139);
+    width: 100%;
+    padding : 15px;
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: 600;
+
+}
+
+.template-sample-card-div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around; 
+}

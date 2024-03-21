@@ -11,7 +11,6 @@ function Templates() {
         <div>
           <Navbar/>
         </div>
-        
         <div>
           <Category/>
         </div>
