@@ -2,7 +2,7 @@ import React from "react";
 import { topDocument } from "../../../Data/data";
 import "./Document.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
+import com from '../../../assets/image/com.png';
 import { faFolderOpen } from "@fortawesome/free-solid-svg-icons";
 
 function Document() {
@@ -18,12 +18,13 @@ function Document() {
         </div>
         {topDocument.map((document) => (
           <div key={document._id} className="card">
-            <FontAwesomeIcon
-              icon={faFolderOpen}
+            <img
+              src={com}
               style={{
                 marginRight: "20px",
                 alignText: "center",
                 color: "#02244a",
+                width:'35px',
                 marginLeft: "20px",
               }}
             />
