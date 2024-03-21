@@ -59,7 +59,7 @@ function Category() {
           </Card>
         ))}
       </div>
-      <Button className="register-button">REGISTER WITH US</Button>
+      <Button className="register-button">REGISTER </Button>
     </div>
   );
 }
