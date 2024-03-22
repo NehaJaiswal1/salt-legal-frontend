@@ -45,21 +45,26 @@
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 20px;
+    border: none;
   }
   
   .step-item {
     flex: 1; 
     margin: 30px;
-    padding: 20px;
+    padding: 30px;
     height: 400px;
     width: 100px !important;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); */
     /* border-bottom: 4px solid red; */
-    
-    border-radius: 20px;
-    background-color: #F3F4F6;
+    border: none;
+    /* border-radius: 20px; */
+    background-color: #ededee;
   }
   
+  .step-item img{
+    width: 100% !important;
+    height:100%!important;
+  }
  
   .step-item p{
     font-size: 22px;

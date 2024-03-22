@@ -5,9 +5,9 @@ import { Button } from '@mui/material'
 import StepCard from './StepCard'
 import { faEarth, faGlobe, faSortNumericAsc, faStopwatch, faTrophy, faUniversalAccess } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import s1 from '../../../assets/step1.webp';
-import s2 from '../../../assets/step2.webp';
-import s3 from '../../../assets/step3.webp';
+import s1 from '../../../assets/template/r4.png';
+import s2 from '../../../assets/template/r2.png';
+import s3 from '../../../assets/template/r3.png';
 
 function Step() {
  

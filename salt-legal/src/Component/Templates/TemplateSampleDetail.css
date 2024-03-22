@@ -66,6 +66,7 @@ background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(208,161,68,0.61
    
 }
 
+
 .template-sample-sub-subcard p{
     font-size: 15px;
     color: black;
@@ -128,3 +129,74 @@ background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(208,161,68,0.61
     justify-content: center;
     justify-content: space-around; 
 }
+
+.card-container-template {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; 
+    padding: 30px;
+    margin: 40px;
+   box-shadow: none;
+   border-top: 1px dotted red;
+   border-bottom: 1px dotted red;
+
+}
+
+
+.card-content-template {
+    text-align: center; 
+    padding: 40px !important;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+}
+
+.card-content-template h3{
+    text-align: left; 
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-weight: 300;
+    color: black;
+}
+
+.template-sample-div-detail{
+  
+    align-items: center;
+    text-align: center;
+    
+    width: 100%;
+    padding : 15px;
+    /* margin-left: 20px; */
+    font-size: 20px;
+    font-weight: 600;
+    /* margin: 50px; */
+    margin-bottom: 50px;
+}
+
+.template-sample-div-detail button{
+    /* width:200px; */
+    height: 60px;
+    width: 180px !important;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.4), 0 8px 10px -6px rgb(0 0 0 / 0.6) !important;
+
+}
+
+
+.card-content-template p{
+    text-align: left; 
+   
+    font-size: 15px;
+    font-weight: 200;
+}
+
+.card-content-template ul li{
+    text-align: left; 
+   
+    font-size: 15px;
+    font-weight: 200;
+
+}
+

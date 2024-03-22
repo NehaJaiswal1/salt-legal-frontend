@@ -1,6 +1,6 @@
 
-import t1 from '../assets/template/t1.png'
-import t2 from '../assets/template/t2.png'
+import t1 from '../assets/template/t1.jpg'
+import t2 from '../assets/template/t2.jpg'
 import t3 from '../assets/template/t3.png'
 import t4 from '../assets/template/t4.png'
 import t5 from '../assets/template/t5.png'
@@ -33,62 +33,62 @@ export const templateSample = [
     },
       {
         _id:3,
-        img: t3,
+        img: t2,
         name: "Human Resource",
         description: "Lorem ipsum dolor sit amet, consectetur",
   }, 
 
   {
     _id:4,
-    img: t4,
+    img: t1,
     name: "IPR",
     description: "Lorem ipsum dolor sit amet, consectetur",
 }, 
 {
     _id:5,
-    img: t5,
+    img: t1,
     name: "Marketing & Sales",
     description: "Lorem ipsum dolor sit amet, consectetur",
 }, 
 {
     _id:6,
-    img: t6,
+    img: t2,
     name: "Finance & Accounting",
     description: "Lorem ipsum dolor sit amet, consectetur",
 }, 
 {
     _id:7,
-    img: t7,
+    img: t1,
     name: "Marketing & Sales",
     description: "Lorem ipsum dolor sit amet, consectetur",
 }, 
 {
     _id:8,
-    img: t8,
+    img: t2,
     name: "Social Media",
     description: "Lorem ipsum dolor sit amet, consectetur",
 }, 
 {
     _id:9,
-    img: t9,
+    img: t1,
     name: "Social Media",
     description: "Lorem ipsum dolor sit amet, consectetur",
 }, 
 {
     _id:10,
-    img: t9,
+    img: t2,
     name: "Social Media",
     description: "Lorem ipsum dolor sit amet, consectetur",
 }, 
 {
     _id:11,
-    img: t11,
+    img: t1,
     name: "Social Media",
     description: "Lorem ipsum dolor sit amet, consectetur",
 }, 
 {
     _id:12,
-    img: t12,
+    img: t2,
     name: "Social Media",
     description: "Lorem ipsum dolor sit amet, consectetur",
 }, 

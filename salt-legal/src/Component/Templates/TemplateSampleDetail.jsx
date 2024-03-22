@@ -1,8 +1,10 @@
+
+
 import React from "react";
 import "./TemplateSampleDetail.css";
 import Navbar from "../Navbar/Navbar";
 import { Card, CardContent, Typography, Button } from "@mui/material";
-import ts1 from "../../assets/template/t-1.png";
+import ts1 from "../../assets/template/sample.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCheck,
@@ -13,6 +15,7 @@ import {
   faFileWord,
   faFolderOpen,
 } from "@fortawesome/free-solid-svg-icons";
+import Footer from '../Home/Footer/Footer'
 
 function TemplateSampleDetail() {
   return (
@@ -175,9 +178,9 @@ function TemplateSampleDetail() {
           </div>
         </div>
       </div>
-      <div>
+      <div className="card-container-template">
         <Card>
-          <CardContent>
+          <CardContent className="card-content-template">
             <span>Creating a Comprehensive Employee Handbook</span>
            
             <p>
@@ -192,23 +195,29 @@ function TemplateSampleDetail() {
               streamlined way to create a professional and thorough staff
               manual.
             </p>
-            <h3>What Is an Employee Handbook?</h3>
+            <h3>What Is an Employee Handbook <span>?</span></h3>
             <p>An Employee Handbook is a document that clarifies all the crucial policies and procedures of your business or company.</p>
             <p>
             In a sense, this document defines in detail the culture of your organization. Also known as a company manual, an Employee Handbook compiles all the essential practices that you have adopted within the business. You are required to provide all the necessary information about your company, in one place. It might seem overwhelming to prepare a comprehensive document that can describe the working conditions of your organization. However, with our employee handbook templates, you can draft a well-formulated guide for your new employees, communicating everything they need to know about their workplace.
             </p>
             <h3>Key Elements of an Employee Handbook</h3>
             <p>The value of a well-constructed Employee Handbook lies in its detail and clarity. It should encompass the following elements:</p>
-            <li><p>Company Culture and Values - Articulate the mission, vision, and core values of your business, helping employees align with your ethos.</p></li>
-            <li><p>Company Culture and Values - Articulate the mission, vision, and core values of your business, helping employees align with your ethos.</p></li>
-            <li><p>Company Culture and Values - Articulate the mission, vision, and core values of your business, helping employees align with your ethos.</p></li>
-            <li><p>Company Culture and Values - Articulate the mission, vision, and core values of your business, helping employees align with your ethos.</p></li>
-            <h3>What are key business policies included in an employee handbook?</h3>
+            <ul>
+              <li>Company Culture and Values - Articulate the mission, vision, and core values of your business, helping employees align with your ethos.</li>
+              <li>Company Culture and Values - Articulate the mission, vision, and core values of your business, helping employees align with your ethos.</li>
+              <li>Company Culture and Values - Articulate the mission, vision, and core values of your business, helping employees align with your ethos.</li>
+              <li>Company Culture and Values - Articulate the mission, vision, and core values of your business, helping employees align with your ethos.</li>
+            </ul>
+            <h3>What are key business policies included in an employee handbook <span>?</span></h3>
             <p>An Employee Handbook typically includes key business policies that are crucial for both the employer and employees to understand and adhere to.</p>
             <p>Get your Business in a Box today to lay a solid groundwork for your employee relations. Our templates offer a clear path to creating comprehensive and compliant Employee Handbooks, ensuring that your business operates smoothly, your team is well-informed, and your company culture is effectively communicated.</p>
-            <p></p>
           </CardContent>
         </Card>
+       
+      </div>
+      <div className="template-sample-div-detail"> <Button> DOWNLOAD</Button></div>
+      <div>
+        <Footer/>
       </div>
     </div>
   );

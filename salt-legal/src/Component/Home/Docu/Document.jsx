@@ -3,9 +3,16 @@ import { topDocument } from "../../../Data/data";
 import "./Document.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import com from '../../../assets/image/com.png';
-import { faFolderOpen } from "@fortawesome/free-solid-svg-icons";
+import { faChevronCircleDown, faChevronDown, faFolderOpen } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router-dom"; // Import useNavigate hook
 
 function Document() {
+
+  const navigate = useNavigate(); // Initialize useNavigate hook
+
+  const handleBrowseMore = () => {
+    navigate('/register'); // Navigate to the "/register" route
+  };
   return (
     <div className="card-container1">
       <div className="card-container">
@@ -29,13 +36,14 @@ function Document() {
               }}
             />
 
-            <h4>{document.name}</h4>
+<h4>{document.name}</h4>
+            <FontAwesomeIcon icon={faChevronDown} size="xs" className="chevron-icon" />
           </div>
         ))}
         
       </div>
       <div className="center-button">
-        <button>BROWSE MORE</button>
+        <button onClick={handleBrowseMore}>BROWSE MORE</button> 
       </div>
     </div>
   );

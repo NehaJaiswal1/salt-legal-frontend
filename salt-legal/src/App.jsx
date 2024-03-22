@@ -10,6 +10,8 @@ import About from './Component/About/About';
 import Package from './Component/Package/Package';
 import Features from './Component/Features/Features';
 import TemplateSampleDetail from './Component/Templates/TemplateSampleDetail';
+import PaymentCard from './Component/PaymentCard/PaymentCard';
+import ContactUs from './Component/Contact/Contact';
 
 
 function App() {
@@ -27,6 +29,8 @@ function App() {
             <Route exact path="/package" element={<Package/>} />
             <Route exact path="/feature" element={<Features/>} />
             <Route exact path="/templates/template-sample" element={<TemplateSampleDetail/>} />
+            <Route exact path="/payment-page" element={<PaymentCard/>} />
+            <Route exact path="/contact-us" element={<ContactUs/>} />
           </Routes>
       </div>
       

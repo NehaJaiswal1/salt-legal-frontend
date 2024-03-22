@@ -1,25 +1,38 @@
 
 
 import React from 'react'
+import { useNavigate } from 'react-router-dom'; 
 import {templateSample} from '../../../Data/templateSample'
 import { Card, CardContent, Typography, CardMedia, Button } from "@mui/material";
 import './TemplateSample.css'
 
 function TemplateSample() {
+
+  const navigate = useNavigate(); 
+
+  const handleImageClick = () => {
+    navigate('/templates/template-sample'); 
+  };
+  const handleButtonClick = () => {
+    navigate('/register'); 
+  };
   return (
    
    
    <div>
-       <h2 className='template-container-h2'>View Our Most Popular <span>Business Templates.</span></h2>
+       <h2 className='template-container-h2'>Discover Our<span> Best-Selling Business Templates! </span> </h2>
           <div className="template-container">
             
         {templateSample.map((item, index) => (
           <Card key={index} className="template-card-style-1">
-            <CardContent>
+             <CardContent>
               <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-                <CardMedia>
-                  <img src={item.img} style={{ width: '100%' }}  />
-                </CardMedia>
+                {/* Wrap the image inside a clickable div */}
+                <div onClick={handleImageClick}>
+                  <CardMedia>
+                    <img src={item.img} style={{ width: '100%' }} alt={item.name} />
+                  </CardMedia>
+                </div>
                 <p>
                   {item.name}
                 </p>
@@ -29,7 +42,7 @@ function TemplateSample() {
         ))}
       </div>
       <div className='template-button-div'>
-      <Button className='register-button'>Get STARTED</Button>
+      <Button className='register-button'onClick={handleButtonClick}>Get STARTED</Button>
       </div>
       
     </div>
