@@ -30,7 +30,7 @@ function TemplateSample() {
                 {/* Wrap the image inside a clickable div */}
                 <div onClick={handleImageClick}>
                   <CardMedia>
-                    <img src={item.img} style={{ width: '100%' }} alt={item.name} />
+                    <img src={item.img} style={{ width: '100%', cursor:'pointer'}} alt={item.name} />
                   </CardMedia>
                 </div>
                 <p>

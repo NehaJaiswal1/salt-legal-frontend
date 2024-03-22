@@ -21,7 +21,8 @@ export const categoryData = [
       img: im,
       name: "StartUp",
       price: "$200",
-      location: 'Dubai'
+      location: 'Dubai',
+      description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, '
     },
       
         
@@ -30,7 +31,8 @@ export const categoryData = [
     img: im1,
     name: "Legal",
     price: "$500",
-    location: 'Dubai'
+    location: 'Dubai',
+    description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, '
     
     },
       {
@@ -38,7 +40,8 @@ export const categoryData = [
         img: im2,
         name: "Human Resource",
         price: "$500",
-        location: 'Dubai'
+        location: 'Dubai',
+        description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, '
   }, 
 
   {
@@ -46,14 +49,16 @@ export const categoryData = [
     img: im3,
     name: "IPR",
     price: "$500",
-    location: 'Dubai'
+    location: 'Dubai',
+    description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, '
 }, 
 {
   _id:1,
   img: im,
   name: "StartUp",
   price: "$200",
-  location: 'Dubai'
+  location: 'Dubai',
+  description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, '
 },
   
     
@@ -62,7 +67,8 @@ export const categoryData = [
 img: im1,
 name: "Legal",
 price: "$500",
-location: 'Dubai'
+location: 'Dubai',
+description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, '
 
 },
   {
@@ -70,7 +76,8 @@ location: 'Dubai'
     img: im2,
     name: "Human Resource",
     price: "$500",
-    location: 'Dubai'
+    location: 'Dubai',
+    description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, '
 }, 
 
 {
@@ -78,7 +85,8 @@ _id:4,
 img: im3,
 name: "IPR",
 price: "$500",
-location: 'Dubai'
+location: 'Dubai',
+description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, '
 },
 
   ]

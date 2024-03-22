@@ -3,6 +3,7 @@
 import React from "react";
 import "./TemplateSampleDetail.css";
 import Navbar from "../Navbar/Navbar";
+import { useNavigate } from 'react-router-dom'; 
 import { Card, CardContent, Typography, Button } from "@mui/material";
 import ts1 from "../../assets/template/sample.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -18,6 +19,11 @@ import {
 import Footer from '../Home/Footer/Footer'
 
 function TemplateSampleDetail() {
+  const navigate = useNavigate(); 
+  const handleDownloadClick = () => {
+    navigate('/register'); 
+  };
+
   return (
     <div>
       <div>
@@ -215,7 +221,7 @@ function TemplateSampleDetail() {
         </Card>
        
       </div>
-      <div className="template-sample-div-detail"> <Button> DOWNLOAD</Button></div>
+      <div className="template-sample-div-detail" onClick={handleDownloadClick}> <Button> DOWNLOAD</Button></div>
       <div>
         <Footer/>
       </div>
