@@ -39,7 +39,8 @@ function ForgotPassword() {
   const handleSendLink = async () => {
     try {
       const response = await fetch(
-        `https://login-signup-0dmg.onrender.com/verification/forgotPasswordClient`,
+        
+        `https://the-salt-legal-backend-1.onrender.com/sendMail`,
         {
           method: "POST",
           headers: {
@@ -54,9 +55,9 @@ function ForgotPassword() {
       console.log(responseData);
       if (response.ok) {
         console.log("Link sent successfully!");
-        const { token } = responseData.data; 
+        // const { token } = responseData.data; 
         // saveAuthData({ token: token, email: formData.data.email });
-        navigate(`/reset-password/${token}`);
+        // navigate(`/reset-password/${token}`);
       } else {
         console.error("Not able to send link", responseData);
       }

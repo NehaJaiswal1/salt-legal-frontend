@@ -45,6 +45,7 @@ function ResetPassword() {
       console.log(responseData);
       if (response.ok) {
         console.log("Password Changed successfully!");
+        const { token } = responseData.data; 
         navigate(`/`);
       } else {
         console.error("Not able to Change Password", responseData);
