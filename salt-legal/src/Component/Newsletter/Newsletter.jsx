@@ -1,3 +1,5 @@
+
+
 import { Button, Card, CardContent, Typography } from "@mui/material";
 import React from "react";
 import b1 from "../../assets/benefit1.png";
@@ -5,6 +7,7 @@ import b2 from "../../assets/benefit2.png";
 import b3 from "../../assets/benefit3.png";
 import "./Newsletter.css";
 import Navbar from "../Navbar/Navbar";
+import Footer from '../Home/Footer/Footer'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBookBookmark,
@@ -203,12 +206,20 @@ function Newsletter() {
             </div>
           </CardContent>
         </div>
-        <div className="news-letter-div-2">
+        <div className="newsletter-banner-1">
+        <div className="text">
+        “In three words I can sum up everything I've learned about life: It goes on.“
+          <p>~ Robert Frost</p>
+        </div>
+       
+       
+      </div>
+        {/* <div className="news-letter-div-2">
           <CardContent>
             <h2>
-              “In three words I can sum up everything I've learned about life: It goes on.“
+             
             </h2>
-            <p>~ Robert Frost</p>
+            <p></p>
 
             <div className="news-letter-div-1">
               <div style={{ marginLeft: "auto" }}>
@@ -216,7 +227,10 @@ function Newsletter() {
               </div>
             </div>
           </CardContent>
-        </div>
+        </div> */}
+      </div>
+      <div>
+        <Footer/>
       </div>
     </div>
   );
