@@ -30,8 +30,9 @@ function SignUp() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
   const [message, setMessage] = useState("");
-  const [acceptOurTerms, setAcceptOurTerms] = useState(false);
+  // const [acceptOurTerms, setAcceptOurTerms] = useState(false);
   const [showTermsMessage, setShowTermsMessage] = useState(false);
   const [successMessage, setSuccessMessage] = useState("");
 
@@ -41,61 +42,59 @@ function SignUp() {
     event.preventDefault();
   };
 
-  // useEffect(() => {
-  //   const hideSuccessMessage = setTimeout(() => {
-  //     setShowSuccessMessage(false);
-  //   }, 3000); // Hide the success message after 3 seconds
+  useEffect(() => {
+    const hideSuccessMessage = setTimeout(() => {
+      setShowSuccessMessage(false);
+    }, 3000); // Hide the success message after 3 seconds
 
-  //   return () => clearTimeout(hideSuccessMessage);
-  // }, [successMessage]); // Add successMessage as a dependency
+    return () => clearTimeout(hideSuccessMessage);
+  }, [successMessage]); // Add successMessage as a dependency
 
-  // const handleCreateAccount = async () => {
+  const handleCreateAccount = async () => {
 
-  //   try {
-  //     if (!acceptOurTerms) {
-  //       setShowTermsMessage(true);
-  //       return;
-  //     }
+    try {
+     
 
-  //     const response = await fetch(
-  //       "https://login-signup-0dmg.onrender.com/register",
-  //       {
-  //         method: "POST",
-  //         headers: {
-  //           "Content-Type": "application/json",
-  //         },
-  //         body: JSON.stringify({ name, email, password }),
-  //       }
-  //     );
+      const response = await fetch(
+        "https://the-salt-legal-backend-1.onrender.com/register",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ name, email, password, confirmPassword }),
+        }
+      );
 
-  //     const responseData = await response.json();
-  //       // console.log(name)
-  //       // console.log(email)
-  //     if (response.ok) {
-  //       // Register successful, you can handle the success here
-  //       console.log("registration successful");
-  //       setSuccessMessage("Registration successful! You can now log in.");
+      const responseData = await response.json();
+        // console.log(name)
+        // console.log(email)
+      if (response.ok) {
+        // Register successful, you can handle the success here
+        console.log("registration successful");
+        setSuccessMessage("Registration successful! You can now log in.");
 
-  //       setName("");
-  //       setEmail("");
-  //       setPassword("");
-  //       setMessage("");
-  //       setAcceptOurTerms(false);
-  //       setShowTermsMessage(false);
-  //     } else {
-  //       // Register failed, log the error details and update the message
-  //       console.error("Register failed", responseData);
-  //       setMessage(`Registration Failed: ${responseData?.message || "An unknown error occurred."}`);
-  //       setAcceptOurTerms(false);
-  //       // showTermsMessage(false)
-  //     }
-  //   } catch (error) {
-  //     console.error("Error during register:", error);
-  //     setMessage("An unexpected error has occurred.");
-  //     setAcceptOurTerms(false);
-  //     // showTermsMessage(false)
-  //   }
-  // }
+        setName("");
+        setEmail("");
+        setPassword("");
+        setConfirmPassword("")
+        setMessage("");
+        
+        setShowTermsMessage(false);
+      } else {
+        // Register failed, log the error details and update the message
+        console.error("Register failed", responseData);
+        setMessage(`Registration Failed: ${responseData?.message || "An unknown error occurred."}`);
+        setAcceptOurTerms(false);
+        // showTermsMessage(false)
+      }
+    } catch (error) {
+      console.error("Error during register:", error);
+      setMessage("An unexpected error has occurred.");
+      setAcceptOurTerms(false);
+      // showTermsMessage(false)
+    }
+  }
 
   return (
     <div className="section-div">
@@ -168,13 +167,25 @@ function SignUp() {
                
               />
             </FormControl>
+            <FormControl sx={{ m: 1, width: "35ch" }} variant="standard">
+              <InputLabel htmlFor="standard-adornment-password">
+               Confirm Password
+              </InputLabel>
+              <Input
+                id="standard-adornment-password"
+                type={showPassword ? "text" : "password"}
+                value={confirmPassword}
+                onChange={(e) => setConfirmPassword(e.target.value)}
+               
+              />
+            </FormControl>
 
             <div className="div-button">
               <Button
                 variant="contained"
                 sx={{ justifyContent: "center", m: 1 }}
-                // onClick={handleCreateAccount}
-                // disabled={!acceptOurTerms} 
+                onClick={handleCreateAccount}
+               
               >
                 Create 
               </Button>

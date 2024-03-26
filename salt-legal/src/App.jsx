@@ -13,6 +13,9 @@ import TemplateSampleDetail from './Component/Templates/TemplateSampleDetail';
 import PaymentCard from './Component/PaymentCard/PaymentCard';
 import ContactUs from './Component/Contact/Contact';
 import Newsletter from './Component/Newsletter/Newsletter';
+import ForgotPassword from './Component/Home/ForgetPassword/ForgetPassword';
+import ResetPassword from './Component/Home/ForgetPassword/ResetPassword';
+import VerifyOTP from './Component/Home/ForgetPassword/VerifyOTP';
 
 
 function App() {
@@ -24,6 +27,10 @@ function App() {
             <Route path="/" element={<Home/>} />
             <Route exact path="/login" element={<Login />} />
             <Route exact path="/register" element={<SignUp />} />
+            <Route exact path="/forgotpassword" element={<ForgotPassword/>} />
+            <Route exact path="/reset-password/:token" element={<ResetPassword />} />
+            {/* <Route path="/otp-verification/:userId" element={<VerifyOTP />} /> */}
+
             <Route exact path="/templates" element={<Templates />} />
             <Route exact path="/about" element={<About/>} />
 

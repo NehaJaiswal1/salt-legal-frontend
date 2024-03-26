@@ -34,20 +34,20 @@ function Login() {
   const [showPassword, setShowPassword] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [rememberMe, setRememberMe] = useState(false);
+  // const [rememberMe, setRememberMe] = useState(false);
   const [message, setMessage] = useState("")
   const [successMessage, setSuccessMessage] = useState("");
 
-  useEffect(() => {
-    // Load saved email and password from localStorage when component mounts
-    const savedEmail = localStorage.getItem("savedEmail");
-    const savedPassword = localStorage.getItem("savedPassword");
+  // useEffect(() => {
+  //   // Load saved email and password from localStorage when component mounts
+  //   const savedEmail = localStorage.getItem("savedEmail");
+  //   const savedPassword = localStorage.getItem("savedPassword");
 
-    if (savedEmail && savedPassword && rememberMe) {
-      setEmail(savedEmail);
-      setPassword(savedPassword);
-    }
-  }, [rememberMe]);
+  //   // if (savedEmail && savedPassword && rememberMe) {
+  //   //   setEmail(savedEmail);
+  //   //   setPassword(savedPassword);
+  //   // }
+  // }, [rememberMe]);
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
 
@@ -55,47 +55,45 @@ function Login() {
     event.preventDefault();
   };
 
-//   const handleLogin = async () => {
-//     try {
-//       const response = await fetch("https://login-signup-0dmg.onrender.com/login", {
-//         method: "POST",
-//         headers: {
-//           "Content-Type": "application/json",
-//         },
-//         body: JSON.stringify({ email, password }),
-//       });
+  const handleLogin = async () => {
+    try {
+      const response = await fetch
+      ("https://the-salt-legal-backend-1.onrender.com/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email, password }),
+      });
   
-//       const responseData = await response.json();
+      const responseData = await response.json();
   
-//       if (response.ok) {
-//         // Login successful, you can handle the success here
-//         console.log("Login successful", responseData);
-//         // auth.saveAuthData({ token: token, emailId: email, userId: userId  });
-//         const token = responseData.data.token;
-//         const email = responseData.data.email;
-//         const userId = responseData.data.userId;
-//         auth.saveAuthData({ token: token, email: email, userId: userId });
+      if (response.ok) {
+        // Login successful, you can handle the success here
+        console.log("Login successful", responseData);
+        // auth.saveAuthData({ token: token, emailId: email, userId: userId  });
+        // const token = responseData.data.token;
+        // const email = responseData.data.email;
+        // const userId = responseData.data.userId;
+        // auth.saveAuthData({ token: token, email: email, userId: userId });
 
-//         setSuccessMessage("Login successfull.");
-//         if (rememberMe) {
-//           localStorage.setItem("savedEmail", email);
-//           localStorage.setItem("savedPassword", password);
-//         }
-//         setEmail("");
-//         setPassword("");
-//         setMessage("");
-//         setRememberMe(false);
+        setSuccessMessage("Login successfull.");
+        
+        setEmail("");
+        setPassword("");
+        setMessage("");
+      
 
-//       } else {
-//         // Login failed, log the error details
-//         console.error("Login failed", responseData);
-//         setMessage(`Login Failed: ${responseData?.message || "An unknown error occurred."}`);
-//       }
-//     } catch (error) {
-//       console.error("Error during login:", error);
-//       setMessage("An unexpected error has occurred.");
-//     }
-//   };
+      } else {
+        // Login failed, log the error details
+        console.error("Login failed", responseData);
+        setMessage(`Login Failed: ${responseData?.message || "An unknown error occurred."}`);
+      }
+    } catch (error) {
+      console.error("Error during login:", error);
+      setMessage("An unexpected error has occurred.");
+    }
+  };
   
   
   return (
@@ -177,7 +175,7 @@ function Login() {
             <Button
                 variant="contained"
                 sx={{ justifyContent: "center", m: 1 }}
-                // onClick={handleLogin}
+                onClick={handleLogin}
               >
                 LogIn
               </Button>
