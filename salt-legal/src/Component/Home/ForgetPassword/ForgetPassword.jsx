@@ -31,6 +31,9 @@ function ForgotPassword() {
   const { userId } = useParams();
 
   const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("")
+  const [successMessage, setSuccessMessage] = useState("");
+
   // const some = useParams();
   //   console.log("oyeeee1",some)
 
@@ -55,14 +58,20 @@ function ForgotPassword() {
       console.log(responseData);
       if (response.ok) {
         console.log("Link sent successfully!");
+        setSuccessMessage("Link sent successfully!");
+        setEmail("");
         // const { token } = responseData.data; 
         // saveAuthData({ token: token, email: formData.data.email });
         // navigate(`/reset-password/${token}`);
       } else {
         console.error("Not able to send link", responseData);
+        setMessage(`Not able to send link: ${responseData?.message || "An unknown error occurred."}`);
+        setMessage("An unexpected error has occurred.");
+
       }
     } catch (error) {
       console.error("Error during sending link for verification", error);
+
     }
   };
  
@@ -99,6 +108,8 @@ function ForgotPassword() {
              VERIFY EMAIL
             </Typography>
             <p className="div-p1">The verification otp will be sent to the mailbox.Please Check it.</p>
+            {message && <Typography variant="body1" color="error">{message}</Typography>}
+            {successMessage && <Typography variant="body2" style={{ color: 'green', textAlign:'center' }}>{successMessage}</Typography>}
             
             <FormControl sx={{ m: 1, width: "35ch" }} variant="standard">
               <InputLabel htmlFor="standard-adornment-email">Email</InputLabel>

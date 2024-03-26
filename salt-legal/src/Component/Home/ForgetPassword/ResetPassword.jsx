@@ -23,6 +23,9 @@ function ResetPassword() {
   const [email, setEmail] = useState("");
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const [message, setMessage] = useState("")
+  const [successMessage, setSuccessMessage] = useState("");
+
   const navigate = useNavigate();
   const { token } = useParams();
 
@@ -45,13 +48,21 @@ function ResetPassword() {
       console.log(responseData);
       if (response.ok) {
         console.log("Password Changed successfully!");
-        const { token } = responseData.data; 
+        // const { token } = responseData.data; 
+        
+        setSuccessMessage("Password Changed successfully!");
+        
+        setNewPassword("");
+        setConfirmPassword("");
+        setMessage("");
         navigate(`/`);
       } else {
         console.error("Not able to Change Password", responseData);
+        setMessage(`Not able to Change Password: ${responseData?.message || "An unknown error occurred."}`);
       }
     } catch (error) {
       console.error("Error during Changing Password", error);
+      setMessage("An unexpected error has occurred.");
     }
   };
   
@@ -87,6 +98,8 @@ function ResetPassword() {
             >
              RESET PASSWORD
             </Typography>
+            {message && <Typography variant="body1" color="error">{message}</Typography>}
+            {successMessage && <Typography variant="body2" style={{ color: 'green', textAlign:'center' }}>{successMessage}</Typography>}
 
             {/* <FormControl sx={{ m: 1, width: "35ch" }} variant="standard">
               <InputLabel htmlFor="standard-adornment-password">Email</InputLabel>
@@ -112,7 +125,7 @@ function ResetPassword() {
               <InputLabel htmlFor="standard-adornment-password">New Password</InputLabel>
               <Input
                 id="standard-adornment-newpassword"
-                type="password"
+                type="text"
                 value={newPassword}
                 onChange={(e) => setNewPassword(e.target.value)}
                
@@ -124,7 +137,7 @@ function ResetPassword() {
               <InputLabel htmlFor="standard-adornment-password">Confirm Password</InputLabel>
               <Input
                 id="standard-adornment-newpassword"
-                type="password"
+                type="text"
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
                
