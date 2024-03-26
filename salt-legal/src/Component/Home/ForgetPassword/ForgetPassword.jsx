@@ -36,7 +36,7 @@ function ForgotPassword() {
 
   // const { username } = useParams();
 
-  const handleSendLink=async () =>{
+  const handleSendLink = async () => {
     try {
       const response = await fetch(
         `https://login-signup-0dmg.onrender.com/verification/forgotPasswordClient`,
@@ -49,22 +49,21 @@ function ForgotPassword() {
             email: email,
           }),
         }
-      )
+      );
       const responseData = await response.json();
       console.log(responseData);
-      if(response.ok){
-        console.log("link send successfully!");
-        // saveAuthData({ token: responseData.data.token, email: formData.data.email });
+      if (response.ok) {
+        console.log("Link sent successfully!");
+        const { token } = responseData.data; 
+        // saveAuthData({ token: token, email: formData.data.email });
         navigate(`/reset-password/${token}`);
-      }
-      else{
+      } else {
         console.error("Not able to send link", responseData);
-
       }
     } catch (error) {
       console.error("Error during sending link for verification", error);
     }
-  }
+  };
  
   return (
     <div className="section-div">
