@@ -1,15 +1,10 @@
 
 
-
-
-
-
-
 import React, { useState } from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import "./ForgetPassword.css";
-import { useNavigate} from 'react-router';
+import { useNavigate, useParams } from 'react-router';
 import {
   Typography,
   Box,
@@ -29,38 +24,35 @@ function ResetPassword() {
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const navigate = useNavigate();
+  const { token } = useParams();
 
-  const handleUpdate=async () =>{
+  const handleUpdate = async () => {
     try {
       const response = await fetch(
-        "https://the-salt-legal-backend-1.onrender.com/updatePassword/${token}",
+        `https://the-salt-legal-backend-1.onrender.com/updatePassword/${token}`,
         {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            // email: email,
             newPassword: newPassword,
-            confirmPassword : confirmPassword,
+            confirmPassword: confirmPassword,
           }),
         }
-      )
+      );
       const responseData = await response.json();
       console.log(responseData);
-      if(response.ok){
+      if (response.ok) {
         console.log("Password Changed successfully!");
         navigate(`/`);
-      }
-      else{
+      } else {
         console.error("Not able to Change Password", responseData);
-
       }
     } catch (error) {
       console.error("Error during Changing Password", error);
     }
-  }
-
+  };
   
   return (
     <div className="section-div">
