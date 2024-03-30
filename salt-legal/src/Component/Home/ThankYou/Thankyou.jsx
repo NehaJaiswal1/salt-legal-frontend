@@ -16,13 +16,13 @@ function Thankyou() {
           direction="column"
           justifyContent="center"
           alignItems="center"
-          style={{ minHeight: '100vh' }}
+          style={{ minHeight: '100dvh' }}
         >
           <div className=' thank-you-page-div' >
             <Grid item>
-              {/* <Typography variant="h7" align="center" gutterBottom>
+              <Typography variant="h7" align="center" gutterBottom>
                 <span style={{ fontWeight: 'bold', color: '#14532d' }}>Thank you!</span>
-              </Typography> */}
+              </Typography>
               <Typography variant="body1" align="center" gutterBottom>
               <span style={{ fontWeight: '200px', color: '#4b5563', fontSize:'30px' }}>
                 Thank you for Choosing Us!</span>

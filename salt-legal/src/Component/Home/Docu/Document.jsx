@@ -23,16 +23,22 @@ function Document() {
 
 
   useEffect(() => {
-    fetch("https://the-salt-legal-backend-1.onrender.com/get/category")
-      .then((response) => response.json())
-      .then((data) => {
-        console.log("Response data:", data); 
-        setCategoryData(data.data); 
-      })
-      .catch((error) => {
-        console.error("Error fetching category data:", error);
-      });
-  }, []);
+    const fetchData = async () => {
+      try {
+        const response = await fetch('https://the-salt-legal-backend.onrender.com/get/category');
+        if (response.ok) {
+          const data = await response.json();
+          setCategoryData(data.data);
+        } else {
+          console.error('Failed to fetch data');
+        }
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+  }, []); 
 
   const handleBrowseMore = () => {
     navigate('/register'); 

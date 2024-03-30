@@ -17,6 +17,7 @@
     margin-bottom: 50px !important;
     background: #02244a;
     display: flex;
+    
     margin: 0 auto;
     /* border: 1px solid yellow; */
 
@@ -31,8 +32,6 @@
     /* font-weight: bold; */
     color: white;
     margin-left: 100px;
-
-
     /* font-size: 30px;
      color: black; */
      /* text-align: center; */
