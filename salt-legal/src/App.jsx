@@ -11,7 +11,7 @@ import About from './Component/About/About';
 import Package from './Component/Package/Package';
 import Features from './Component/Features/Features';
 import TemplateSampleDetail from './Component/Templates/TemplateSampleDetail';
-import PaymentCard from './Component/PaymentCard/PaymentCard';
+import PaymentCard from './Component/Package/Package';
 import ContactUs from './Component/Contact/Contact';
 import Newsletter from './Component/Newsletter/Newsletter';
 import ForgotPassword from './Component/Home/ForgetPassword/ForgetPassword';
@@ -42,7 +42,7 @@ function App() {
             <Route exact path="/newsletter" element={<Newsletter />} />
             <Route exact path="/templates/template-sample" 
             element={<TemplateSampleDetail/>} />
-            <Route exact path="/payment-page" element={<PaymentCard/>} />
+            {/* <Route exact path="/payment-page" element={<PaymentCard/>} /> */}
             <Route exact path="/contact-us" element={<ContactUs/>} />
             <Route path="*" element={<ErrorPage />} />
           </Routes>
@@ -53,7 +53,5 @@ function App() {
 };
 
 export default App;
-
-
 
 
