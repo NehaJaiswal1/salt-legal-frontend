@@ -1,5 +1,4 @@
 
-
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Card from "@mui/material/Card";
@@ -11,12 +10,26 @@ import {
   FormControl,
   InputLabel,
   Input,
+  InputAdornment,
+  IconButton,
   Button,
   Checkbox,
 } from "@mui/material";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebook,
+  faGoogle,
+  faGooglePlus,
+  faLinkedinIn,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
+
 
 function SignUp() {
+  
+  useEffect(() => {
+    window.scrollTo(0, 0); 
+  }, []);
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = React.useState(false);
   const [name, setName] = useState("");
@@ -36,9 +49,12 @@ function SignUp() {
 
  
   const handleCreateAccount = async () => {
+
     try {
+     
+
       const response = await fetch(
-        "https://the-salt-legal-backend-1.onrender.com/register",
+        "https://the-salt-legal-backend.onrender.com/register",
         {
           method: "POST",
           headers: {
@@ -49,39 +65,35 @@ function SignUp() {
       );
 
       const responseData = await response.json();
-      // console.log(name)
-      // console.log(email)
+        // console.log(name)
+        // console.log(email)
       if (response.ok) {
         // Register successful, you can handle the success here
         console.log("registration successful");
         setSuccessMessage("Registration successful! You can now log in.");
-        navigate("/thank-you");
 
         setName("");
         setEmail("");
         setPassword("");
-        setConfirmPassword("");
+        setConfirmPassword("")
         setMessage("");
-
-        // setShowTermsMessage(false);
+        
+        setShowTermsMessage(false);
+        navigate('/thank-you');
       } else {
         // Register failed, log the error details and update the message
         console.error("Register failed", responseData);
-        setMessage(
-          `Registration Failed: ${
-            responseData?.message || "An unknown error occurred."
-          }`
-        );
-        setAcceptOurTerms(false);
+        setMessage(`Registration Failed: ${responseData?.message || "An unknown error occurred."}`);
+        
         // showTermsMessage(false)
       }
     } catch (error) {
       console.error("Error during register:", error);
       setMessage("An unexpected error has occurred.");
-      setAcceptOurTerms(false);
+      
       // showTermsMessage(false)
     }
-  };
+  }
 
   return (
     <div className="section-div">
@@ -129,6 +141,7 @@ function SignUp() {
                 type="text"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
+                
               />
             </FormControl>
             <FormControl sx={{ m: 1, width: "35ch" }} variant="standard">
@@ -138,6 +151,7 @@ function SignUp() {
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+               
               />
             </FormControl>
             <FormControl sx={{ m: 1, width: "35ch" }} variant="standard">
@@ -149,17 +163,19 @@ function SignUp() {
                 type={showPassword ? "text" : "password"}
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
+               
               />
             </FormControl>
             <FormControl sx={{ m: 1, width: "35ch" }} variant="standard">
               <InputLabel htmlFor="standard-adornment-password">
-                Confirm Password
+               Confirm Password
               </InputLabel>
               <Input
                 id="standard-adornment-password"
                 type={showPassword ? "text" : "password"}
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
+               
               />
             </FormControl>
 
@@ -168,8 +184,9 @@ function SignUp() {
                 variant="contained"
                 sx={{ justifyContent: "center", m: 1 }}
                 onClick={handleCreateAccount}
+               
               >
-                Create
+                Create 
               </Button>
             </div>
 

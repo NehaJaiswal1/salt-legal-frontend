@@ -12,6 +12,7 @@ import Testimonial from "../Home/testimonial/testimonial";
 import tsl from '../../assets/tsl-logo.png'
 
 function Features() {
+  
   useEffect(() => {
     window.scrollTo(0, 0); 
   }, []);
