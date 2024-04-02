@@ -1,6 +1,6 @@
 
 
-import React from 'react';
+import React,{useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
 import Footer from '../Home/Footer/Footer';
@@ -10,7 +10,9 @@ import Testimonial from '../Home/testimonial/testimonial'
 import { Button } from '@mui/material';
 
 function Package() {
-  
+  useEffect(() => {
+    window.scrollTo(0, 0); 
+  }, []);
   const navigate = useNavigate(); 
   const handleButtonClick = () => {
     navigate('/payment-page'); 

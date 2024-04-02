@@ -1,7 +1,7 @@
 
 
 
-import React from "react";
+import React,{useEffect} from "react";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Home/Footer/Footer";
 import about from "../../assets/template/3.webp";
@@ -9,6 +9,9 @@ import { useNavigate } from "react-router-dom";
 
 function About() {
   const navigate = useNavigate();
+  useEffect(() => {
+    window.scrollTo(0, 0); 
+  }, []);
 
   return (
     <div>
