@@ -1,7 +1,7 @@
 
 .div-step{
     background: #ededee;
-    height: 700px;
+    height: 800px;
     width: 100%;
     margin-top: 100px;
     border-top: 1px solid #02244a;
@@ -44,26 +44,29 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 20px;
+    
     border: none;
+    /* padding: 0.5rem; */
   }
   
   .step-item {
-    flex: 1; 
-    margin: 30px;
-    padding: 30px;
+    /* flex: 1;  */
+    margin: 20px;
+    padding: 20px;
     height: 400px;
-    width: 100px !important;
+    /* width: rem !important; */
     /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); */
     /* border-bottom: 4px solid red; */
     border: none;
-    /* border-radius: 20px; */
+    border-radius: 20px;
     background-color: #ededee;
   }
   
   .step-item img{
     width: 100% !important;
     height:100%!important;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   }
  
   .step-item p{

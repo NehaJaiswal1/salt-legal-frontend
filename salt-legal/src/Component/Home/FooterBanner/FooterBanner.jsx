@@ -13,8 +13,8 @@ function FooterBanner() {
   
       <div className="footer-banner-1">
         <div className="text">
-          Powered By 
-          <p>The Salt Legal</p>
+           
+          <p>Powered By  The Salt Legal</p>
         </div>
         <div className="image">
           <img src={tsl} alt="Image" />

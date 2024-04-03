@@ -82,7 +82,7 @@ function Package() {
       <div className="package">
 
         <div className="package-card">
-          <h2>1 User</h2>
+          <h2>Single Category </h2>
 
           <div style={{ display: 'flex', flexDirection: 'row' }}>
             <FontAwesomeIcon icon={faCheckSquare} style={{ marginRight: '15px', color: 'black', marginTop: '5px' }} /><p>20 GB cloud storage Templates</p>
@@ -99,19 +99,19 @@ function Package() {
           <h3>US $10 / month</h3>
           <button onClick={handlePayment}>SELECT</button>
         </div>
-        <div className=" package-card-2">
+        <div className="package-card">
           <h2>5 Users</h2>
           <div style={{ display: 'flex', flexDirection: 'row' }}>
-            <FontAwesomeIcon icon={faCheckSquare} style={{ marginRight: '15px', color: 'white', marginTop: '5px' }} /><p>Ideal for small teams </p>
+            <FontAwesomeIcon icon={faCheckSquare} style={{ marginRight: '15px', color: 'black', marginTop: '5px' }} /><p>20 GB cloud storage Templates</p>
           </div>
           <div style={{ display: 'flex', flexDirection: 'row' }}>
-            <FontAwesomeIcon icon={faCheckSquare} style={{ marginRight: '15px', color: 'white', marginTop: '5px' }} /><p>Ideal for small teams </p>
+            <FontAwesomeIcon icon={faCheckSquare} style={{ marginRight: '15px', color: 'black', marginTop: '5px' }} /><p>20 GB cloud storage Templates</p>
           </div>
           <div style={{ display: 'flex', flexDirection: 'row', textAlign: 'center' }}>
-            <FontAwesomeIcon icon={faCheckSquare} style={{ marginRight: '15px', color: 'white', marginTop: '5px' }} /><p>Ideal for small teams </p>
+            <FontAwesomeIcon icon={faCheckSquare} style={{ marginRight: '15px', color: 'black', marginTop: '5px' }} /><p>20 GB cloud storage Templates</p>
           </div>
           <div style={{ display: 'flex', flexDirection: 'row' }}>
-            <FontAwesomeIcon icon={faCheckSquare} style={{ marginRight: '15px', color: 'white', marginTop: '5px' }} /><p>Ideal for small teams </p>
+            <FontAwesomeIcon icon={faCheckSquare} style={{ marginRight: '15px', color: 'black', marginTop: '5px' }} /><p>20 GB cloud storage Templates</p>
           </div>
 
           <h3>US ${book.price} month</h3>

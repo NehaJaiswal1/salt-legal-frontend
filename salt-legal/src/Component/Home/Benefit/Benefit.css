@@ -26,34 +26,40 @@
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 20px;
+    padding: 1rem;
   }
   
   .benefit-item {
     flex: 1; 
     margin: 30px;
     padding: 20px;
-    height: 350px;
-    width: 100px !important;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    height: 380px;
+    width: 80px !important;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
+  
     /* border-bottom: 4px solid red; */
-    border: 1px solid red;
+    /* border: 1px solid red; */
     border-radius: 20px;
-    background-color: #F3F4F6;
+    background-image: url('../../../assets/template/savetime.jpg');
   }
   
   .icon-wrapper {
     display: flex;
-    justify-content: left;
+    justify-content: center;
     margin-bottom: 10px;
     margin-top: 10px;
   }
   
   .icon {
     /* background-color: red; */
-    color: red;
-    padding: 12px;
+    /* color: red; */
+    /* padding: 12px; */
     border-radius: 50%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
+    width: 180px;
+    height: 120px;
+
   }
   
   .benefit-title {

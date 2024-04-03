@@ -19,13 +19,13 @@ function Banner() {
       <div className="banner-image">
         <div className="banner-overlay"></div>
         <div className="banner-text">
-          <h2>Empower your <span>legal journey </span>  with precision and efficiency</h2>
-          <span> <p>welcome to your ultimate law toolkit</p> </span>
+          <h2>Empower your <span>LEGAL JOURNEY </span>  with precision and efficiency</h2>
+        <p className="div-banner-p">welcome to your ultimate law toolkit</p>
         </div>
 
-         {/* <div className="banner-search"> */}
+         <div className="banner-search">
           {/* <div className="flex bg-white rounded-full mx-auto  p-4 "> */}
-          {/* <div className="banner-search1">
+          <div className="banner-search1">
             <FontAwesomeIcon
               icon={faSearch}
               // style={{position:'absolute', alignItems:'center', color:'gray'}}
@@ -33,18 +33,18 @@ function Banner() {
               size="xl"
             />
             <input name="search" placeholder="Search Legal, Marketing" />
-          </div> */}
+          </div>
 
-          {/* <button>Search</button> */}
-          {/* </div> */}
-        {/* </div>
-       */}
+          <button>Search</button>
+         
+        </div>
+      
         <div className="download-div">
           <div className="download-div-1">
             <span><FontAwesomeIcon
               icon={faUser}
               // size="3x"
-            //  style={{color:'black'}}
+             style={{color:'#D0A144'}}
             /></span>
             <div class="column">
               <h4>1M +</h4>
@@ -55,7 +55,7 @@ function Banner() {
             <span><FontAwesomeIcon
               icon={faDownload}
               // size="3x"
-              // style={{color:'black'}}
+              style={{color:'#D0A144'}}
             /></span>
             <div class="column">
               <h4>12K</h4>
@@ -66,7 +66,7 @@ function Banner() {
             <span><FontAwesomeIcon
               icon={faShareAlt}
               // size="3x"
-              // style={{color:'black'}}
+              style={{color:'#D0A144'}}
             /></span>
             <div class="column">
               <h4>10K+</h4>

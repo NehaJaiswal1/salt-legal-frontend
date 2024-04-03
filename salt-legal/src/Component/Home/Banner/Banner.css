@@ -1,13 +1,14 @@
+
 .banner-container {
   position: relative;
 }
 
 .banner-image {
   width: 97vw;
-  height: 600px;
+  height: 700px;
   margin: 0 auto;
   top: 0;
-  background-image: url("../../../assets/bg10.png");
+  background-image: url("../../../assets/template/3.webp");
   background-size:cover;
   background-repeat: no-repeat;
   position: relative; 
@@ -46,9 +47,17 @@
 }
 
 .banner-text p {
-  font-size: 1.7rem;
-  color: #d63384;
+  font-size: 1.2rem;
+  
   /* font-weight: 400; */
+ 
+}
+
+.div-banner-p{
+  font-size: 1rem;
+  font-weight: 500 !important;
+  text-align: center;
+  color: white;
 }
 
 
@@ -59,7 +68,7 @@ input:focus {
 
 .banner-search {
   position: absolute;
-  bottom: 150px;
+  bottom: 100px;
   /* top: 40%; */
   left: 50%;
   /* transform: translateX(-50%); */
@@ -102,7 +111,7 @@ input:focus {
   border-radius: 20px !important;
   /* margin-left: 1rem; */
   margin-right: 1rem;
-  background-color: #02244a !important;
+  background-color: #d63384 !important;
   color: white;
   margin-left: auto;
   margin-top: 5px;
@@ -121,21 +130,22 @@ input:focus {
 
 .download-div {
   position: absolute;
-  bottom: 2rem;
+  bottom: -4rem;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   flex-direction: row;
   color: black;
-  background-color: whitesmoke;
-  opacity: 0.4;
+  background-color: white;
+  background-image: url("../../../assets/template/cardbg.jpg");
+  /* opacity: 0.7; */
   box-shadow: 0 25px 50px -12px rgba(224, 224, 224, 0.25);
   height: 150px;
   width: 900px;
   border: 1px solid #D0A144;
   border-radius: 20px;
   
-  /* background-color: #02244a; */
+  /* background-color: #D0A144; */
 
 }
 

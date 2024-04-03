@@ -13,13 +13,13 @@
     width: 80%;
     height: 150px;
     border-radius: 20px;
-    margin-top: 50px !important;
-    margin-bottom: 50px !important;
-    background: #02244a;
+    margin-top: 150px !important;
+    margin-bottom: 150px !important;
+    background: #f3f4f6;
     display: flex;
-    
+    /* background-image: url('../../../assets/template/cardbg.jpg'); */
     margin: 0 auto;
-    /* border: 1px solid yellow; */
+    border: 2px dotted gray;
 
   }
   
@@ -31,7 +31,7 @@
     font-size: 30px;
     /* font-weight: bold; */
     color: white;
-    margin-left: 100px;
+    /* margin-left: 20px; */
     /* font-size: 30px;
      color: black; */
      /* text-align: center; */
