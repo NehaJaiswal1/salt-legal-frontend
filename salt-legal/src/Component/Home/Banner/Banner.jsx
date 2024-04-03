@@ -19,7 +19,7 @@ function Banner() {
       <div className="banner-image">
         <div className="banner-overlay"></div>
         <div className="banner-text">
-          <h2>Empower your <span>LEGAL JOURNEY </span>  with precision and efficiency</h2>
+          <h2>Empower your LEGAL JOURNEY with precision and efficiency</h2>
         <p className="div-banner-p">welcome to your ultimate law toolkit</p>
         </div>
 
@@ -32,7 +32,7 @@ function Banner() {
               className="search-icon"
               size="xl"
             />
-            <input name="search" placeholder="Search Legal, Marketing" />
+            <input name="search" placeholder="Legal, Marketing docs" />
           </div>
 
           <button>Search</button>

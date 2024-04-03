@@ -8,7 +8,7 @@
   height: 700px;
   margin: 0 auto;
   top: 0;
-  background-image: url("../../../assets/template/3.webp");
+  background-image: url("../../../assets/bg10.png");
   background-size:cover;
   background-repeat: no-repeat;
   position: relative; 
@@ -58,6 +58,7 @@
   font-weight: 500 !important;
   text-align: center;
   color: white;
+
 }
 
 
@@ -68,7 +69,7 @@ input:focus {
 
 .banner-search {
   position: absolute;
-  bottom: 100px;
+  bottom: 120px;
   /* top: 40%; */
   left: 50%;
   /* transform: translateX(-50%); */
@@ -82,7 +83,8 @@ input:focus {
   background-color: white;
   border-radius: 45px;
   padding: 0.6rem;
-  width: 700px;
+  width: 600px;
+  height: 70px;
 }
 
 
@@ -93,6 +95,7 @@ input:focus {
 }
 
 .banner-search1 input {
+  height: 2rem;
   width: calc(100% - 2rem);
   padding: 1rem;
   border: none;

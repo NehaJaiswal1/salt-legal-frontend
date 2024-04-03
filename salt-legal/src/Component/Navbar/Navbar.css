@@ -78,8 +78,14 @@
 
 
 button{
-  background-color: #d63384 !important;
-  color: white !important;
+  /* background-color: #d63384 !important; */
+  background: rgb(214, 51, 132) !important;
+  background: linear-gradient(
+    93deg,
+    rgba(214, 51, 132, 1) 0%,
+    rgba(231, 188, 44, 1) 97%
+  ) !important;
+  color: #fff !important;
   width: 120px;
   height: 42px;
   padding: 8px !important;
