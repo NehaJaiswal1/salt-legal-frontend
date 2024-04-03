@@ -4,10 +4,10 @@
 
 .banner-image {
   width: 97vw;
-  height: 900px;
+  height: 600px;
   margin: 0 auto;
   top: 0;
-  background-image: url("../../../assets/bg10.jpg");
+  background-image: url("../../../assets/bg10.png");
   background-size:cover;
   background-repeat: no-repeat;
   position: relative; 
@@ -29,7 +29,6 @@
   position: absolute;
   top: 50%;
   left: 50%;
-
   transform: translate(-50%, -50%);
   text-align: center;
   color: white;
@@ -48,7 +47,8 @@
 
 .banner-text p {
   font-size: 1.7rem;
-  color: #D0A144;
+  color: #d63384;
+  /* font-weight: 400; */
 }
 
 
@@ -121,18 +121,21 @@ input:focus {
 
 .download-div {
   position: absolute;
-  bottom: 40px;
+  bottom: 2rem;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   flex-direction: row;
-  color: white;
-  background-color: transparent;
-  height: 120px;
+  color: black;
+  background-color: whitesmoke;
+  opacity: 0.4;
+  box-shadow: 0 25px 50px -12px rgba(224, 224, 224, 0.25);
+  height: 150px;
   width: 900px;
   border: 1px solid #D0A144;
   border-radius: 20px;
-  background-color: #02244a;
+  
+  /* background-color: #02244a; */
 
 }
 
@@ -143,6 +146,7 @@ input:focus {
   /* Change from space-around to center */
   align-items: center;
   width: 100%;
+  opacity: 0.9;
 }
 
 /* 
@@ -169,5 +173,6 @@ input:focus {
 
 .column p {
   margin-top: 0;
+ 
   /* Remove any top margin */
 }

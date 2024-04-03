@@ -65,7 +65,7 @@ function Category() {
     <div className="category-container">
       <div>
         <h2 className="container1">
-          Reimagining Your Business Management with Comprehensive Templates
+          Reimagining Your <span>  Business Management </span> with <span> Comprehensive </span> Templates
         </h2>
         <p>5,000+ Templates | 10+ Business Departments</p>
       </div>
