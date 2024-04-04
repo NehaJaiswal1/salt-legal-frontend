@@ -21,67 +21,30 @@ function About() {
         className="flex flex-col sm:flex-row  sm:min-h-full overflow-hidden"
         style={{ height: "700px" }}
       >
-        <img src={about} className="p-2 md:w-1/2" />
+        <img src={about} className="p-20 md:w-1/2" />
         <div
           className="md:w-1/2 min-h-full"
           style={{ marginTop: "5px", padding: "20px" }}
         >
-          <p className="text-lg font-bold text-blue-900">
-            About The SALT Legal
+          <p className="text-lg font-bold text-blue-900 p-10">
+          Don’t worry, you’re in safe hands.
           </p>
           <span>Our Mission</span>
-          <p className="text-slate-700 text-lg font-semibold mt-2">
-            Welcome to The SALT Legal, a dynamic and client-focused legal firm
-            committed to providing strategic solutions across a spectrum of
-            legal domains. Our dedicated team of legal experts brings a wealth
-            of experience and a passion for delivering results to every client
-            we serve..
-          </p>
-
-          <p className="text-slate-700 text-lg mt-5">
-            Welcome to The SALT Legal, a dynamic and client-focused legal firm
-            committed to providing strategic solutions across a spectrum of
-            legal domains. Our dedicated team of legal experts brings a wealth
-            of experience and a passion for delivering results to every client
-            we serve..
-          </p>
-
-          <p className="text-slate-700 text-xl font-semibold mt-4">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores
-            molestias, tempora iste architecto dignissimos saepe aliquid porro!
-            Voluptatem enim fuga quis inventore dolorum perspiciatis maxime,
-            tenetur, aperiam nam autem eum!
-          </p>
+          
           <p className="text-slate-700 text-lg mt-2">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum
-            vero cupiditate quae eius ea qui pariatur, harum officiis ullam
-            similique officia illo cum magnam veritatis aliquid ipsam ratione
-            velit expedita.
+          At The SALT Legal, our mission is to empower businesses and individuals by navigating the complexities of the legal landscape. We strive to be more than just legal advisors; we are partners in your success, offering tailored solutions that align with your unique needs.
           </p>
 
-          <p className="text-slate-700 text-xl font-semibold mt-4">
-            On desktop and mobile
-          </p>
+          
           <p className="text-slate-700 text-lg mt-2">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
-            ab aut, magni reiciendis maiores quaerat minus labore dicta dolorum,
-            provident ipsum iusto optio perferendis magnam consequatur, vel
-            quasi voluptas! Itaque.
+          In a rapidly changing world, innovation and adaptability are crucial. The SALT Legal stays at the forefront of legal developments, leveraging innovative approaches to tackle emerging challenges and ensuring that our clients are well-prepared for the future.
           </p>
 
           <p className="text-slate-700 text-lg mt-2">
-            More quality hires Proudly Canadians is the #1 external source of
-            hire.*
+          At The SALT Legal, we believe in being proactive and strategic in our legal interventions. From preventing disputes before they escalate to developing comprehensive compliance strategies, our goal is to keep you ahead of the legal curve and minimize risks.
           </p>
-
-          <p className="text-red-700 text-sm font-semibold mt-2">
-            100% Guranteed Success Rate
-          </p>
-          <p className="text-red-700 text-sm font-semibold mt-2">
-            100% Client Service Satisfaction
-          </p>
-          <p className="text-red-700 text-sm font-semibold mt-2">
-            100% Transparency
+          <p className="text-slate-700 text-lg mt-2">
+          At The SALT Legal, we believe in being proactive and strategic in our legal interventions. From preventing disputes before they escalate to developing comprehensive compliance strategies, our goal is to keep you ahead of the legal curve and minimize risks.
           </p>
         </div>
       </div>
@@ -91,36 +54,24 @@ function About() {
         className="flex flex-col md:flex-row overflow-hidden"
       >
         <div className="font-bold p-5 md:p-20 w-full md:w-2/4 overflow-hidden">
-          <h2 className="font-bold text-xl text-gray-800 mt-7 ">Lorem Ipsum</h2>
+          <h2 className="font-bold text-xl text-gray-800 mt-7 ">Employer-Employee Disputes</h2>
           <p className="font-semibold text-gray-700 mt-7">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
-            molestias magni harum. Minima provident obcaecati amet animi saepe,
-            iure facere excepturi, totam numquam quia quaerat, nam dolores
-            voluptatum a dolorum.
+          The complexities of employer-employee relationships is crucial in today's fast-paced business environment. Our team at The SALT Legal has a proven track record in handling a wide range of disputes, including wrongful termination, discrimination, harassment, and contractual disagreements. We strive to protect the interests of both employers and employees through effective legal strategies and alternative dispute resolution mechanisms.
           </p>
           <p className="font-semibold text-gray-700 mt-2">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Voluptatibus facere eaque vero! Officiis corporis aliquid, saepe
-            adipisci asperiores culpa! Ipsa dolorum eos explicabo illo sapiente
-            dicta similique illum distinctio vel.
+          In the realm of employer-employee disputes, we have successfully represented a multinational corporation facing allegations of workplace discrimination. Through a combination of meticulous documentation review, witness interviews, and expert negotiation, we secured a resolution that protected our client's reputation while addressing the concerns of the aggrieved employee.
           </p>
-          <button className="font-semibold p-4 mt-5 md:mt-28 bg-blue-950 rounded-md text-white overflow-hidden">
+          <button className="font-semibold p-4  md:mt-20 bg-blue-950 rounded-md text-white overflow-hidden">
             CONNECT US
           </button>
         </div>
         <div className="p-5 md:p-20 w-full md:w-2/4 overflow-hidden">
-          <h2 className="font-bold text-xl text-gray-800 mt-7 ">Lorem Ipsum</h2>
+          <h2 className="font-bold text-xl text-gray-800 mt-7 ">Labour Law & Regulations</h2>
           <p className="font-semibold text-gray-700 mt-7">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos, ut!
-            Iusto rem et at nihil quaerat accusantium eveniet beatae molestiae.
-            Neque, sequi eveniet molestiae itaque enim optio molestias officia
-            aut.
+          Staying compliant with labor laws and regulations is essential for any business. The SALT Legal offers expert guidance on employment contracts, workplace policies, compliance audits, and representation in labor disputes. Our goal is to help businesses create a fair and legally sound work environment while mitigating risks associated with labor law violations.
           </p>
           <p className="font-semibold text-gray-700 mt-2">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam,
-            alias, voluptas eius ratione architecto maiores ea reiciendis animi
-            eos et eum non culpa, doloremque libero fuga beatae reprehenderit.
-            Vel, sed.
+          One of our clients, a rapidly growing tech startup, sought our assistance in navigating labor law compliance during a period of expansion. We conducted a thorough audit of their employment contracts, policies, and procedures, ensuring alignment with local regulations. This proactive approach not only prevented potential legal challenges but also fostered a positive work environment for the company's growing workforce.
           </p>
           <button className="font-semibold p-4 mt-5 md:mt-20 bg-blue-950 rounded-md text-white overflow-hidden">
             Pay Now

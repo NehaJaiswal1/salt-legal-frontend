@@ -22,7 +22,7 @@ export const categoryData = [
       name: "StartUp",
       price: "$200",
       location: 'Dubai',
-      description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, '
+      description:'Employer-Employee Disputes'
     },
       
         
@@ -32,7 +32,7 @@ export const categoryData = [
     name: "Legal",
     price: "$500",
     location: 'Dubai',
-    description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, '
+    description:'Information Technology & Cyber Laws'
     
     },
       {
@@ -41,7 +41,7 @@ export const categoryData = [
         name: "Human Resource",
         price: "$500",
         location: 'Dubai',
-        description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, '
+        description:'Labour Law & Regulations'
   }, 
 
   {
@@ -50,7 +50,7 @@ export const categoryData = [
     name: "IPR",
     price: "$500",
     location: 'Dubai',
-    description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, '
+    description:'Privacy Laws'
 }, 
 {
   _id:1,
@@ -58,7 +58,7 @@ export const categoryData = [
   name: "StartUp",
   price: "$200",
   location: 'Dubai',
-  description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, '
+  description:'Information Technology & Cyber Laws'
 },
   
     
@@ -68,7 +68,7 @@ img: im1,
 name: "Legal",
 price: "$500",
 location: 'Dubai',
-description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, '
+description:'Information Technology & Cyber Laws'
 
 },
   {
@@ -77,7 +77,7 @@ description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, '
     name: "Human Resource",
     price: "$500",
     location: 'Dubai',
-    description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, '
+    description:'Information Technology & Cyber Laws'
 }, 
 
 {
@@ -86,7 +86,7 @@ img: im3,
 name: "IPR",
 price: "$500",
 location: 'Dubai',
-description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, '
+description:'Information Technology & Cyber Laws'
 },
 
   ]

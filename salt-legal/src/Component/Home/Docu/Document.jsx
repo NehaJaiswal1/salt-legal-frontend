@@ -169,7 +169,7 @@ function Document() {
             Whatever Business <span>or </span>Legal Document You Need,
             <span> We Have a Template </span> for You.
           </h3>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo inventore quos officiis, natus nostrum, </p>
+          <p>we offer 200+ templates in different categories | Register with Us | Download templates</p>
         </div>
         {categoryData.slice(0, 24).map((item, index) => (
           <div key={index} className="card">

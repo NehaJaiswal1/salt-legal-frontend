@@ -9,7 +9,7 @@ import "./Features.css";
 import { categoryData } from "../../Data/data";
 import Testimonials from "../Home/testimonial/testimonial";
 import Testimonial from "../Home/testimonial/testimonial";
-import tsl from '../../assets/tsl-logo.png'
+import tsl1 from "../../assets/logo.webp";
 
 function Features() {
   
@@ -63,8 +63,7 @@ function Features() {
           <span>Our Core Features</span>
         </h2>
         <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci
-          temporibus facilis doloribus totam vero illum!
+        At The SALT Legal, our diverse team of legal experts specializes in offering in-depth services across various legal domains, including Employer-Employee Disputes, Labour Law & Regulations, Privacy Laws, Information Technology & Cyber Laws, Startup Advisory, Agreements & Disputes, and Intellectual Property.
         </p>
       </div>
 
@@ -117,16 +116,17 @@ function Features() {
       <div>
         <Testimonial />
       </div>
-      <div>
+     
+      
       <div className="feature-footer-banner-1">
         <div className="feature-text">
-          Powered By 
-          <p>The Salt Legal</p>
+        <div className="image">
+          <p>
+         " A legal innovator crafting comprehensive solutions across diverse practice areas for exceptional client experiences."
+          </p>
+         
+          <img src={tsl1} alt="Image" />
         </div>
-        <div className="feature-image">
-          <img src={tsl} alt="Image" />
-        </div>
-       
       </div>
       </div>
       <div>
