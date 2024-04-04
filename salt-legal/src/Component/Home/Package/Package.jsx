@@ -77,7 +77,7 @@ function Package() {
   return (
     <div className='pakage-container'>
       <h2>Choose a <span>Right plan</span> for you</h2>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae quos nemo totam unde quaerat odit facere.</p>
+      <p>Our template packages are tailored to your needs, with flexible pricing for a wide range of pre-written templates that streamline your business communication.</p>
 
       <div className="package">
 
