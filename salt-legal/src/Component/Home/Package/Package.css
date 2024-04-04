@@ -51,15 +51,14 @@
 .package-card:hover {
   transform: scale(1.07);
   transition: transform 0.3s ease;
-  background-color: #f3f4f6;
+  /* background-image: url('../../../assets/cardgrey.jpg'); */
+  background-color: rgb(233, 233, 233);
+  background-image: none;
   /* background: rgb(255, 255, 255);
-  background: linear-gradient(
-    50deg,
-    rgba(255, 255, 255, 0.896796218487395) 36%,
-    rgba(56, 56, 56, 1) 84%,
-    rgba(74, 71, 71, 1) 99%
-  ); */
+ 
   border: none;
+  /* color: rgb(163, 163, 163) !important; */
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
 }
 
 .package-card button:hover {
@@ -67,6 +66,7 @@
   transition: transform 0.3s ease;
   background: white;
   /* background: linear-gradient(93deg, rgba(214,51,132,1) 0%, rgba(231,188,44,1) 97%) */
+ 
 }
 
 .package-card1:hover {
@@ -139,7 +139,16 @@
 .package-card h2 {
   font-size: 24px;
   margin-bottom: 30px;
-
+  font-weight: 700;
+  /* color:#c07299; */
+   background: -webkit-linear-gradient(
+    93deg,
+    rgba(214, 51, 132, 1) 0%,
+    rgba(231, 188, 44, 1) 97%
+  );;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family:'Kaushan Script';
 }
 
 .package-card p {
