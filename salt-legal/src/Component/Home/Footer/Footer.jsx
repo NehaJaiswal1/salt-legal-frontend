@@ -44,8 +44,8 @@ const Footer = () => {
             </div>
             <div class="footer-section">
                 <h3 class="footer-heading">Follow Us</h3>
-                <p><FontAwesomeIcon icon={faPhone} size='lg' style={{color:'#D0A144', marginRight:'5px'}}/> +1 (416) 871-5196</p>
-                <p><FontAwesomeIcon icon={faEnvelope} size='lg' style={{color:'#D0A144', marginRight:'5px'}}/> contact@gmail.com</p>
+                <p><FontAwesomeIcon icon={faPhone} size='lg' style={{color:'#D0A144', marginRight:'5px'}}/>+91 8130047133</p>
+                <p><FontAwesomeIcon icon={faEnvelope} size='lg' style={{color:'#D0A144', marginRight:'5px'}}/> contact@thesaltlegal.com</p>
                 <div class="social-icons">
                     <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faFacebook} size="2x" style={{color:'#D0A144', marginRight:'5px'}}/></a>
                     <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faTwitter} size="2x" style={{color:'#D0A144', marginRight:'5px'}}/></a>
