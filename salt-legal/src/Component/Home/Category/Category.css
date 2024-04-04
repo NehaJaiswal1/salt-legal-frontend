@@ -42,6 +42,11 @@
    font-weight: 400;
 }
 
+
+span{
+  color: #d0a144 !important;
+}
+
 .container1{
   text-align: center;
   color: black;
