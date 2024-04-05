@@ -14,3 +14,8 @@ export const userIdState = atom ({
     key : 'userIdState',
     default : null,
 })
+
+export const paidUserState = atom ({
+    key : 'paidUserState',
+    default : null,
+})

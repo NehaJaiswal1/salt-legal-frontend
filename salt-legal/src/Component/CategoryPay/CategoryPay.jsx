@@ -59,30 +59,32 @@ function CategoryPay() {
 //         downloadFiles();
 //   }
 
-  const handleDownload = async () => {
-    if (selectedFolder !== null) {
-      try {
-        const folder = categoryData[selectedFolder];
-        const downloadURLs = await Promise.all(
-          folder.subDocuments.map(async (fileName) => {
-            const fileRef = ref(storage, `SubCategories/${folder.folderName}/${fileName}`);
-            return await getDownloadURL(fileRef);
-          })
-        );
-        
-        downloadURLs.forEach((url, index) => {
+const handleDownload = async () => {
+  if (selectedFolder !== null) {
+    try {
+      const folder = categoryData[selectedFolder];
+      const downloadURLs = await Promise.all(
+        folder.subDocuments.map(async (fileName) => {
+          const fileRef = ref(storage, `SubCategories/${folder.folderName}/${fileName}`);
+          return await getDownloadURL(fileRef);
+        })
+      );
+      console.log("downloadURLS", downloadURLs);
+      downloadURLs.forEach((url, index) => {
+        setTimeout(() => {
           const link = document.createElement('a');
           link.href = url;
           link.setAttribute('download', `file${index}`);
           document.body.appendChild(link);
           link.click();
           document.body.removeChild(link);
-        });
-      } catch (error) {
-        console.error('Error downloading files:', error);
-      }
+        }, index * 1000);
+      });
+    } catch (error) {
+      console.error('Error downloading files:', error);
     }
-  };
+  }
+};
 
   
 
