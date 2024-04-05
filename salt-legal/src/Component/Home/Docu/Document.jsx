@@ -1,42 +1,25 @@
-
-
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faDownload } from '@fortawesome/free-solid-svg-icons';
-import { useNavigate,useLocation } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import com from '../../../assets/image/com.png';
 import './Document.css';
 import { getStorage, ref, listAll, getDownloadURL } from 'firebase/storage';
 import { useRecoilValue } from 'recoil';
 import { jwtTokenState } from '../../auth/atoms';
 
-
-
 function Document() {
-
   const navigate = useNavigate();
   const jwtToken = useRecoilValue(jwtTokenState);
   const [categoryData, setCategoryData] = useState([]);
   const [expandedCategory, setExpandedCategory] = useState(null);
   const [fileUrl, setFileUrl] = useState([]);
-  const cameFromPackagesPage = location.state && location.state.from === '/packages';
-
-  const firebaseConfig = {
-    apiKey: "AIzaSyDVoCPjnHeVwhXGS6e2TecybfRA5kO47BM",
-    authDomain: "firstfirebaseproject-c676f.firebaseapp.com",
-    projectId: "firstfirebaseproject-c676f",
-    storageBucket: "the-salt-legal.appspot.com",
-    messagingSenderId: "490386883552",
-    appId: "1:490386883552:web:629d36e63e41982abce185",
-    measurementId: "G-R45S0BBB9B"
-  };
-
+  const cameFromPackagesPage = useLocation().state && useLocation().state.from === '/packages';
   const storage = getStorage();
 
   useEffect(() => {
     fetchUploadedImages();
   }, []);
-
 
   const toggleCategory = (index) => {
     setExpandedCategory(expandedCategory === index ? null : index);
@@ -48,8 +31,7 @@ function Document() {
 
   const handleDownload = () => {
     if (jwtToken) {
-      if (cameFromPackagesPage) 
-      { 
+      if (cameFromPackagesPage) {
         downloadFiles();
       } else {
         navigate('/package');
@@ -58,32 +40,28 @@ function Document() {
       navigate('/login');
       console.log('User not logged in. Please login to download.');
     }
-  }
-  
-
-  // const handleDownload = () => {
-  //   if (jwtToken) {
-  //     navigate('/package');
-  //   } else {
-  //     navigate('/login');
-  //     console.log('User not logged in. Please login to download.');
-  //   }
-  //   // navigate('/package')
-  // }
-
+  };
 
   const fetchUploadedImages = async () => {
     try {
       const subCategoriesRef = ref(storage, 'SubCategories');
       const subCategoryItems = await listAll(subCategoriesRef);
 
-      const folderNames = subCategoryItems.prefixes.map((folderRef) => folderRef.name);
+      const categoryPromises = subCategoryItems.prefixes.map(async (folderRef) => {
+        const subCategoryName = folderRef.name;
+        const subCategoryRef = ref(storage, `SubCategories/${subCategoryName}`);
+        const subCategoryItems = await listAll(subCategoryRef);
 
+        const subDocuments = subCategoryItems.items.map((item) => item.name);
+        const subFolders = subCategoryItems.prefixes.map(async (subFolderRef) => {
+          const subFolderName = subFolderRef.name;
+          const subFolderItems = await listAll(subFolderRef);
+          const subFolderDocuments = subFolderItems.items.map((item) => item.name);
+          return { folderName: subFolderName, subDocuments: subFolderDocuments };
+        });
 
-      const categoryPromises = folderNames.map(async (folderName) => {
-        const folderRef = ref(storage, `SubCategories/${folderName}`);
-        const folderItems = await listAll(folderRef);
-        return { folderName, subDocuments: folderItems.items.map(item => item.name) };
+        const subFolderData = await Promise.all(subFolders);
+        return { folderName: subCategoryName, subDocuments, subFolders: subFolderData };
       });
 
       const categoryData = await Promise.all(categoryPromises);
@@ -101,30 +79,8 @@ function Document() {
     return words.length > 3 ? `${words.slice(0, 3).join(' ')}...` : fileName;
   };
 
-
-
-
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       const response = await fetch('https://the-salt-legal-backend.onrender.com/get/category');
-  //       if (response.ok) {
-  //         const data = await response.json();
-  //         setCategoryData(data.data);
-  //       } else {
-  //         console.error('Failed to fetch data');
-  //       }
-  //     } catch (error) {
-  //       console.error('Error fetching data:', error);
-  //     }
-  //   };
-
-  //   fetchData();
-  // }, []);
-
   const downloadFiles = async () => {
     try {
-      
       const downloadURLs = await Promise.all(
         categoryData.flatMap((item) =>
           item.subDocuments.map(async (fileName) => {
@@ -133,8 +89,7 @@ function Document() {
           })
         )
       );
-  
-     
+
       downloadURLs.forEach((url, index) => {
         const link = document.createElement('a');
         link.href = url;
@@ -147,7 +102,6 @@ function Document() {
       console.error('Error downloading files:', error);
     }
   };
-  
 
   const handleBrowseMore = () => {
     if (jwtToken) {
@@ -156,10 +110,7 @@ function Document() {
       navigate('/login');
       console.log('User not logged in. Please login to download.');
     }
-
   };
-
-  
 
   return (
     <div className="card-container1">
@@ -178,28 +129,48 @@ function Document() {
             <div className="chevron-icon" onClick={() => toggleCategory(index)}>
               <FontAwesomeIcon icon={faChevronDown} size="xs" />
             </div>
-
-
             {expandedCategory === index && (
               <div className="dropdown-options">
-                {/* Render subcategories here */}
-                {item.subDocuments.map((subDocument, subIndex) => (
-                  <div key={subIndex} className="subcategory-div">
-                    {truncateFileName(subDocument)}
+                {/* Conditionally render subfolders and subdocuments */}
+                {item.subFolders.length === 0 ? (
+                  // Render only subdocuments if no subfolders present
+                  item.subDocuments.map((subDocument, subIndex) => (
+                    <div key={subIndex} className="subcategory-div">
+                      {truncateFileName(subDocument)}
+                    </div>
+                  ))
+                ) : (
+                  // Render both subfolders and subdocuments if subfolders present
+                  item.subFolders.map((subFolder, subIndex) => (
+                    <div key={subIndex} className="subcategory-div">
+                      <h5>{subFolder.folderName}</h5>
+                      {/* Render subfolder's subdocuments */}
+                      {subFolder.subDocuments.map((subDocument, subDocIndex) => (
+                        <div key={subDocIndex} className="subdocument-div">
+                          {truncateFileName(subDocument)}
+                          {/* Download button for subdocument */}
+                          <FontAwesomeIcon icon={faDownload} className='drop-down-fa-icon' onClick={() => handleDownload(subFolder.folderName, subDocument)} />
+                        </div>
+                      ))}
+                    </div>
+                  ))
+                )
+                }
+                {/* Render download icon if there are subdocuments */}
+                {item.subDocuments.length > 0 && (
+                  <div className='drop-down-div-fa'>
+                    <FontAwesomeIcon icon={faDownload} className='drop-down-fa-icon' onClick={handleDownload} />
                   </div>
-                ))}
-                <div className='drop-down-div-fa'>
-                  <FontAwesomeIcon icon={faDownload} className='drop-down-fa-icon' onClick={handleDownload} />
-                </div>
+                )}
               </div>
             )}
+
           </div>
         ))}
       </div>
       <div className="center-button">
         <button onClick={handleBrowseMore}>BROWSE MORE</button>
       </div>
-
     </div>
   );
 }
